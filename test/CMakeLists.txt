@@ -19,8 +19,6 @@ target_link_libraries(
 message(STATUS ${EIGEN3_INCLUDE_DIR})
 
 target_include_directories(${TEST_NAME} PUBLIC
-    "${CMAKE_SOURCE_DIR}/includes"
-    "${CMAKE_SOURCE_DIR}/src"
     "${CMAKE_SOURCE_DIR}"
     "${EIGEN3_INCLUDE_DIR}"
     "${GTEST_INCLUDE_DIRS}"

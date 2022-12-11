@@ -16,8 +16,6 @@ target_link_libraries(
 
 target_include_directories(${LIB_NAME} PUBLIC
     ${CMAKE_SOURCE_DIR}
-    ${CMAKE_SOURCE_DIR}/src
-    ${CMAKE_SOURCE_DIR}/includes
     "${EIGEN3_INCLUDE_DIR}"
 )
 

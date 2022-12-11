@@ -47,6 +47,10 @@ performance-*,
 AnalyzeTemporaryDtors: false
 WarningsAsErrors: '*'
 CheckOptions:
+  - key:             readability-identifier-naming.ConstantCase
+    value:           CamelCase
+  - key:             readability-identifier-naming.ConstantPrefix
+    value:           k
   - key:             readability-identifier-naming.ClassCase
     value:           CamelCase
   - key:             readability-identifier-naming.EnumCase
@@ -57,15 +61,17 @@ CheckOptions:
   # throughout the code base.
   - key:             readability-identifier-naming.FunctionIgnoredRegexp
     value:           "LLVMFuzzerTestOneInput"
-  - key:             readability-identifier-naming.MemberCase
-    value:           snake_case
-  - key:             readability-identifier-naming.MemberCase
-    value:           snake_case
-  - key:             readability-identifier-naming.ParameterCase
-    value:           snake_case
+  - key:             readability-identifier-naming.ClassMember
+    value:           CamelCase
+  - key:             readability-identifier-naming.ClassMemberPrefix
+    value:           m
+  - key:             readability-identifier-naming.ClassMethodCase
+    value:           camelCase
   - key:             readability-identifier-naming.UnionCase
     value:           CamelCase
   - key:             readability-identifier-naming.VariableCase
+    value:           snake_case
+  - key:             readability-identifier-naming.ParameterCase
     value:           snake_case
   - key:             readability-identifier-naming.IgnoreMainLikeFunctions
     value:           1
