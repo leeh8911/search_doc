@@ -9,12 +9,19 @@
 
 #include "/develop/src/search.h"
 
+#include <algorithm>
 #include <filesystem>
 #include <iostream>
+#include <iterator>
 #include <string>
 #include <unordered_set>
 
 namespace search_doc::search {
 
-SearchEngine::SearchEngine(std::string root) { std::cout << ""; }
+SearchEngine::SearchEngine(std::string root) : mTargetExtension{"doc", "txt", "md"} {
+    using namespace std::string_literals;  // NOLINT
+
+    std::ostream_iterator<std::string> os_it(std::cout, " ");
+    std::copy(std::begin(mTargetExtension), std::end(mTargetExtension), os_it);
+}
 }  // namespace search_doc::search
