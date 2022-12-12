@@ -18,10 +18,17 @@
 
 namespace search_doc::search {
 
-SearchEngine::SearchEngine(std::string root) : mTargetExtension{"doc", "txt", "md"} {
-    using namespace std::string_literals;  // NOLINT
+namespace fs = std::filesystem;
 
-    std::ostream_iterator<std::string> os_it(std::cout, " ");
-    std::copy(std::begin(mTargetExtension), std::end(mTargetExtension), os_it);
+SearchEngine::SearchEngine(std::string root) : mTargetExtension{".doc", ".txt", ".md"} {}
+
+void FileSearchRecursive(std::string root) {
+    std::unordered_set<std::string> mTargetExtension{".doc", ".txt", ".md"};
+    for (const fs::directory_entry& dir_entry : fs::recursive_directory_iterator(root)) {
+        const fs::path& dir_path = dir_entry.path();
+        if (mTargetExtension.contains(dir_path.extension())) {
+            std::cout << "doc-" << dir_path << "\n";
+        }
+    }
 }
 }  // namespace search_doc::search
