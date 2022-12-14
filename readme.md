@@ -13,9 +13,21 @@
 * 하나의 단어를 쿼리 할 수 있는 API
 * 출력을 보여주는 뷰어
 
+```mermaid
+classDiagram
 
+SearchDoc --> Repository : Find(keyword)
+SearchDoc --> Collector : Collect()
+Repository --> DataBase : Query(keyword)
+Collector --> Indexer : Parse(document)
+Collector --> Repository : Update(document)
+
+```
 
 ## TODO
+[] 특정 키워드를 포함하는 문서를 찾아주는 기능 추가 
+[] 데이터베이스에서 키워드를 통해 문서를 찾아주는 기능 추가
+[] 
 
 ## Docker
 
