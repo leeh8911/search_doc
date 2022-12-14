@@ -16,6 +16,7 @@ RUN apt-get update && apt-get install -qq -y -f --no-install-recommends \
     ca-certificates libgoogle-glog-dev \
     libgtest-dev automake wget curl unzip autoconf libtool g++ gcc make gdb \
     cmake git vim \
+    sqlitebrowser \ 
     ## Security
     openssh-client \
     ## BLAS & LAPACK

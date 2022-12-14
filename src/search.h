@@ -17,6 +17,8 @@
 #include <unordered_set>
 
 namespace search_doc::search {
+
+/// @brief 최근 업데이트가 진행된 문서 파일을 찾아줍니다.
 class SearchEngine {
  public:
     explicit SearchEngine(std::string root = "~/");
