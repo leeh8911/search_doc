@@ -15,20 +15,20 @@
 #include <string>
 #include <vector>
 
-namespace search_doc {
-namespace api {
-
-using Document = std::map<std::string, size_t>;
-using DocumentList = std::vector<Document>;
+#include "src/document.h"
+#include "src/repository.h"
+namespace search_doc::api {
 
 class SearchDoc {
  public:
-    SearchDoc() = default;
+    explicit SearchDoc(repository::RepositoryPtr repo);
 
-    DocumentList Find(std::string keyword);
-    DocumentList Collect();
+    value_object::DocumentList Find(std::string keyword);
+    value_object::DocumentList Collect();
+
+ private:
+    repository::RepositoryPtr repo_{};
 };
-}  // namespace api
-}  // namespace search_doc
+}  // namespace search_doc::api
 
 #endif  // SRC_SEARCH_DOC_H_

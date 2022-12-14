@@ -19,6 +19,7 @@ classDiagram
 SearchDoc --> Repository : Find(keyword)
 SearchDoc --> Collector : Collect()
 Repository --> DataBase : Query(keyword)
+Repository --> DataBase : Update(keyword)
 Collector --> Indexer : Parse(document)
 Collector --> Repository : Update(document)
 

@@ -10,13 +10,18 @@
 #include "src/search_doc.h"
 
 #include <string>
+#include <utility>
 
-namespace search_doc {
-namespace api {
-DocumentList SearchDoc::Find(std::string keyword) {
-    DocumentList result{};
+#include "src/document.h"
+
+namespace search_doc::api {
+SearchDoc::SearchDoc(repository::RepositoryPtr repo) : repo_(std::move(repo)) {}
+
+value_object::DocumentList SearchDoc::Find(std::string keyword) {
+    value_object::DocumentList result{};
 
     return result;
 }
-}  // namespace api
-}  // namespace search_doc
+
+value_object::DocumentList SearchDoc::Collect() { return value_object::DocumentList{}; }
+}  // namespace search_doc::api

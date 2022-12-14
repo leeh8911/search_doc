@@ -11,14 +11,16 @@
 
 #include <gtest/gtest.h>
 
-namespace search_doc {
-namespace test {
-TEST(SearchDocTest, FindNoneKeywordCase) {
-    api::SearchDoc sut;
+#include "src/document.h"
+#include "src/repository.h"
+#include "test/mock_repository.h"
 
-    api::DocumentList result = sut.Find("");
+namespace search_doc::test {
+TEST(SearchDocTest, FindNoneKeywordInEmptyRepositoryCase) {
+    api::SearchDoc sut(std::make_unique<MockRepository>());
+
+    value_object::DocumentList result = sut.Find("");
 
     EXPECT_EQ(0, result.size());
 }
-}  // namespace test
-}  // namespace search_doc
+}  // namespace search_doc::test
