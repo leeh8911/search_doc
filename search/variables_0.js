@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['children_65',['children',['../classsearch__doc_1_1search_1_1value__object_1_1Node.html#aa99ce97767dbd6bd9f0769ee86d46025',1,'search_doc::search::value_object::Node']]]
+  ['doc_5flist_5f_85',['doc_list_',['../classsearch__doc_1_1test_1_1MockRepository.html#aa2d172313593143e80f86f4f62724cfc',1,'search_doc::test::MockRepository']]]
 ];

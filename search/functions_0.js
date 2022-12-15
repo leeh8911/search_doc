@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filesearchrecursive_61',['FileSearchRecursive',['../namespacesearch__doc_1_1search.html#ac5dff971c467d94253c5aba0c1bb1875',1,'search_doc::search']]]
+  ['collect_74',['Collect',['../classsearch__doc_1_1api_1_1SearchDoc.html#addf2a36a76b93276923c5185d5512cdf',1,'search_doc::api::SearchDoc']]]
 ];

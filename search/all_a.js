@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['readme_2emd_25',['readme.md',['../readme_8md.html',1,'']]],
-  ['repository_26',['Repository',['../temp_8h.html#classRepository',1,'']]]
+  ['platform_5fid_29',['PLATFORM_ID',['../CMakeCCompilerId_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCXXCompilerId.cpp']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['collector_41',['Collector',['../temp_8h.html#classCollector',1,'']]]
+  ['document_52',['Document',['../classsearch__doc_1_1value__object_1_1Document.html',1,'search_doc::value_object']]]
 ];

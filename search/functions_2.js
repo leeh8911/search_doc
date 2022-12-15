@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['searchengine_63',['SearchEngine',['../classsearch__doc_1_1search_1_1SearchEngine.html#a35ddb92569b15f6ece9e4d7d8bd97178',1,'search_doc::search::SearchEngine']]]
+  ['find_76',['Find',['../classsearch__doc_1_1api_1_1SearchDoc.html#aefe74a733aa57c1911a5474d616a4d94',1,'search_doc::api::SearchDoc']]]
 ];
