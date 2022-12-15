@@ -19,6 +19,9 @@ class Document {
  public:
     explicit Document(std::string name, std::set<std::string> keywords = {});
 
+    bool operator==(const Document& other) const;
+    bool Contains(std::string keyword) const;
+
  private:
     std::string name_{};
     std::set<std::string> keywords_{};
