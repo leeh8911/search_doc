@@ -60,4 +60,9 @@ TEST(SearchDocTest, NonExistKeyword) {
 
     EXPECT_EQ(0, result.size());
 }
+
+// TODO(sangwon): SearchDoc Collection 파일 시스템을 순회를 돌며 문서를 찾고, 문서 안에 포함된 키워드를 추출하는 작업을
+// 수행한다.
+// TODO(sangwon): 파일시스템에 대한 인터페이스 필요
+// TODO(sangwon): 목 파일 시스템을 통해 순회를 돌며 파일을 찾아 놓는다.
 }  // namespace search_doc::test
