@@ -23,4 +23,23 @@ TEST(SearchDocTest, FindNoneKeywordInEmptyRepositoryCase) {
 
     EXPECT_EQ(0, result.size());
 }
+
+TEST(SearchDocTest, FindKeywordInNoneEmptyRepositoryCase) {
+    auto repo = std::make_unique<MockRepository>();
+
+    value_object::DocumentList docs{};
+    value_object::Document empty_keyword("empty keyword", std::set<std::string>{});
+    value_object::Document manual("manual", std::set<std::string>{"something"});
+    docs.emplace_back(empty_keyword);
+    docs.emplace_back(manual);
+
+    repo->Update(docs);
+
+    api::SearchDoc sut(std::move(repo));
+
+    auto result = sut.Find("something");
+
+    EXPECT_EQ(1, result.size());
+    EXPECT_EQ(manual, result.front());
+}
 }  // namespace search_doc::test
