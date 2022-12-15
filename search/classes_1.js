@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['matrix_106',['Matrix',['../classmath__cpp_1_1matrix_1_1Matrix.html',1,'math_cpp::matrix']]]
+  ['node_42',['Node',['../classsearch__doc_1_1search_1_1value__object_1_1Node.html',1,'search_doc::search::value_object']]]
 ];

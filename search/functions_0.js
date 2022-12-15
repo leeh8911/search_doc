@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['absolute_134',['Absolute',['../classmath__cpp_1_1matrix_1_1Matrix.html#a56534563223bae284e01db8a9721f322',1,'math_cpp::matrix::Matrix']]]
+  ['filesearchrecursive_61',['FileSearchRecursive',['../namespacesearch__doc_1_1search.html#ac5dff971c467d94253c5aba0c1bb1875',1,'search_doc::search']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['col_5f_190',['col_',['../classmath__cpp_1_1matrix_1_1Matrix.html#a0ee29c9e725e1792ebf90fac45394756',1,'math_cpp::matrix::Matrix']]]
+  ['children_65',['children',['../classsearch__doc_1_1search_1_1value__object_1_1Node.html#aa99ce97767dbd6bd9f0769ee86d46025',1,'search_doc::search::value_object::Node']]]
 ];
