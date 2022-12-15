@@ -12,6 +12,11 @@ docker-build:
 docker-run:
 	docker run -it --rm -v ${PWD}:/develop search-doc
 
+.PHONY: docker-push
+docker-push:
+	 docker tag search-doc leeh8911/search-doc
+	 docker push leeh8911/search-doc
+
 .PHONY: format
 format:
 	find src -iname *.h -o -iname *.cpp | xargs clang-format -i
