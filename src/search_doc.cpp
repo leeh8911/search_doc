@@ -17,11 +17,7 @@
 namespace search_doc::api {
 SearchDoc::SearchDoc(repository::RepositoryPtr repo) : repo_(std::move(repo)) {}
 
-value_object::DocumentList SearchDoc::Find(std::string keyword) {
-    value_object::DocumentList result{};
-
-    return result;
-}
+value_object::DocumentList SearchDoc::Find(std::string keyword) { return repo_->Query(keyword); }
 
 value_object::DocumentList SearchDoc::Collect() { return value_object::DocumentList{}; }
 }  // namespace search_doc::api
