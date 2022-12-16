@@ -22,10 +22,13 @@ namespace search_doc::value_object {
 
 namespace fs = std::filesystem;
 
-Document::Document(std::string name) : Document(fs::directory_entry(name)) {}
+Document::Document(std::string fullfile) : Document(fs::directory_entry(fullfile)) {}
 
 Document::Document(const std::filesystem::directory_entry& entry)
-    : name_(entry.path().string()), keyword_map_(), filetime_(entry.last_write_time()) {
+    : name_(entry.path().filename().string()),
+      path_(entry.path().parent_path().string()),
+      keyword_map_(),
+      filetime_(entry.last_write_time()) {
     Read();
 }
 
@@ -40,13 +43,15 @@ bool Document::Contains(std::string keyword) const { return keyword_map_.contain
 
 std::string Document::Name() const { return name_; }
 
+std::string Document::Path() const { return path_; }
+
 std::map<std::string, std::set<size_t>> Document::KeywordMap() const { return keyword_map_; }
 
 fs::file_time_type Document::Filetime() const { return filetime_; }
 
 void Document::Read() {
     std::ifstream fs;
-    fs.open(name_);
+    fs.open(path_ + "/" + name_);
 
     std::string word;
     size_t count = 0;
@@ -57,7 +62,7 @@ void Document::Read() {
 }
 
 std::ostream& operator<<(std::ostream& os, const Document& doc) {
-    os << doc.name_ << "["
+    os << doc.path_ << "/" << doc.name_ << "["
        << std::chrono::duration_cast<std::chrono::milliseconds>(doc.filetime_.time_since_epoch()).count() << "]"
        << ": {";
 

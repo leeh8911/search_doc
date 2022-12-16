@@ -31,6 +31,7 @@ struct IDocument {
 
     //  protected:
     virtual std::string Name() const = 0;
+    virtual std::string Path() const = 0;
     virtual std::map<std::string, std::set<size_t>> KeywordMap() const = 0;
     virtual fs::file_time_type Filetime() const = 0;
 };
@@ -39,7 +40,7 @@ struct IDocument {
 ///
 class Document : public IDocument {
  public:
-    explicit Document(std::string name);
+    explicit Document(std::string fullfile);
     explicit Document(const fs::directory_entry& entry);
 
     bool operator==(const IDocument& other) const override;
@@ -49,10 +50,13 @@ class Document : public IDocument {
 
  private:
     std::string name_{};
+    std::string path_{};
+
     std::map<std::string, std::set<size_t>> keyword_map_{};
     fs::file_time_type filetime_{};
 
     std::string Name() const override;
+    std::string Path() const override;
     std::map<std::string, std::set<size_t>> KeywordMap() const override;
     fs::file_time_type Filetime() const override;
 
