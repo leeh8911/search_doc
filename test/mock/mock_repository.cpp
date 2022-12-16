@@ -17,7 +17,7 @@ value_object::DocumentList MockRepository::Query(std::string name) {
     result.reserve(doc_list_.size());
 
     for (const auto& doc : doc_list_) {
-        if (doc.Contains(name)) {
+        if (doc->Contains(name)) {
             result.emplace_back(doc);
         }
     }

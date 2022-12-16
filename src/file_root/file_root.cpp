@@ -27,7 +27,7 @@ value_object::DocumentList ActualFileRoot::Search() {
     value_object::DocumentList doc_list{};
     for (const fs::directory_entry& entry : fs::recursive_directory_iterator(fs::path(root_path_))) {
         if (extensions_.contains(entry.path().extension())) {
-            doc_list.emplace_back(entry);
+            doc_list.emplace_back(std::make_shared<value_object::Document>(entry));
         }
     }
 

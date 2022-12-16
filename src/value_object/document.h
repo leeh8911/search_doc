@@ -13,6 +13,7 @@
 #include <filesystem>
 #include <iostream>
 #include <map>
+#include <memory>
 #include <set>
 #include <string>
 #include <vector>
@@ -58,7 +59,8 @@ class Document : public IDocument {
     void Read();
 };
 
-using DocumentList = std::vector<Document>;
+using DocumentPtr = std::shared_ptr<Document>;
+using DocumentList = std::vector<DocumentPtr>;
 
 }  // namespace search_doc::value_object
 
