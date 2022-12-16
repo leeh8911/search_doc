@@ -8,8 +8,10 @@
 ///
 ///
 
-#include "src/file_root.h"
+#include "src/file_root/file_root.h"
 
 namespace search_doc::test {
-class MockFileRoot : public domain::FileRoot {};
+class MockFileRoot : public domain::FileRoot {
+    value_object::DocumentList Search() override;
+};
 }  // namespace search_doc::test

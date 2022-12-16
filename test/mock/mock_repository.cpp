@@ -7,7 +7,7 @@
 /// @copyright Copyright (c) 2022
 ///
 
-#include "test/mock_repository.h"
+#include "test/mock/mock_repository.h"
 
 #include <algorithm>
 

@@ -16,7 +16,7 @@
 #include <vector>
 
 #include "src/document.h"
-#include "src/file_root.h"
+#include "src/file_root/file_root.h"
 #include "src/repository.h"
 namespace search_doc::api {
 

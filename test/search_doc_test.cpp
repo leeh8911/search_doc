@@ -13,8 +13,8 @@
 
 #include "src/document.h"
 #include "src/repository.h"
-#include "test/mock_file_root.h"
-#include "test/mock_repository.h"
+#include "test/mock/mock_file_root.h"
+#include "test/mock/mock_repository.h"
 
 namespace search_doc::test {
 TEST(SearchDocTest, FindNoneKeywordInEmptyRepositoryCase) {
