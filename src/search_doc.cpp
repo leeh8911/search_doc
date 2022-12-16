@@ -12,16 +12,16 @@
 #include <string>
 #include <utility>
 
-#include "src/document.h"
+#include "src/value_object/document.h"
 
 namespace search_doc::api {
-SearchDoc::SearchDoc(repository::RepositoryPtr repo) : repo_(std::move(repo)) {}
 
-value_object::DocumentList SearchDoc::Find(std::string keyword) {
-    value_object::DocumentList result{};
+using domain::FileRootPtr;
+using repository::RepositoryPtr;
 
-    return result;
-}
+SearchDoc::SearchDoc(RepositoryPtr repo, FileRootPtr root) : repo_(std::move(repo)), root_(std::move(root)) {}
+
+value_object::DocumentList SearchDoc::Find(std::string keyword) { return repo_->Query(keyword); }
 
 value_object::DocumentList SearchDoc::Collect() { return value_object::DocumentList{}; }
 }  // namespace search_doc::api

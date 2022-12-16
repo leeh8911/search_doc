@@ -15,19 +15,21 @@
 #include <string>
 #include <vector>
 
-#include "src/document.h"
+#include "src/file_root/file_root.h"
 #include "src/repository.h"
+#include "src/value_object/document.h"
 namespace search_doc::api {
 
 class SearchDoc {
  public:
-    explicit SearchDoc(repository::RepositoryPtr repo);
+    explicit SearchDoc(repository::RepositoryPtr repo = nullptr, domain::FileRootPtr root = nullptr);
 
     value_object::DocumentList Find(std::string keyword);
     value_object::DocumentList Collect();
 
  private:
     repository::RepositoryPtr repo_{};
+    domain::FileRootPtr root_{};
 };
 }  // namespace search_doc::api
 

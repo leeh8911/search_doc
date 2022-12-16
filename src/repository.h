@@ -14,7 +14,7 @@
 #include <memory>
 #include <string>
 
-#include "src/document.h"
+#include "value_object/document.h"
 
 namespace search_doc::repository {
 /// @brief 데이터베이스를 다루기 위한 인터페이스 클래스
