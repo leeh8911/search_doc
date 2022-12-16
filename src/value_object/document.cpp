@@ -9,12 +9,25 @@
 
 #include "src/value_object/document.h"
 
+#include <algorithm>
+#include <chrono>
+#include <filesystem>
+#include <iostream>
+#include <iterator>
 #include <string>
 #include <utility>
+
 namespace search_doc::value_object {
+namespace fs = std::filesystem;
+Document::Document(std::string name, std::set<std::string> keywords, fs::file_time_type filetime)
+    : name_(std::move(name)), keywords_(std::move(keywords)), filetime_(filetime) {}
+
+Document::Document(const std::filesystem::directory_entry& entry)
+    : Document(entry.path().string(), {}, entry.last_write_time()) {}
 
 bool Document::operator==(const Document& other) const {
     if (name_ != other.name_) return false;
+    if (filetime_ != other.filetime_) return false;
     if (keywords_.size() != other.keywords_.size()) return false;
 
     auto this_it = std::begin(keywords_);
@@ -30,5 +43,15 @@ bool Document::operator==(const Document& other) const {
 }
 
 bool Document::Contains(std::string keyword) const { return keywords_.contains(keyword); }
+
+std::ostream& operator<<(std::ostream& os, const Document& doc) {
+    os << doc.name_ << "["
+       << std::chrono::duration_cast<std::chrono::milliseconds>(doc.filetime_.time_since_epoch()).count() << "]"
+       << ": {";
+
+    std::copy(std::begin(doc.keywords_), std::end(doc.keywords_), std::ostream_iterator<std::string>(os, ", "));
+    os << "}";
+    return os;
+}
 
 }  // namespace search_doc::value_object

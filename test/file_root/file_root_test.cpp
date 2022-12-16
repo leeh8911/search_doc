@@ -24,5 +24,8 @@ TEST(ActualFileRootTest, TotalFilesCase) {
     auto doc_list = sut.Search();
 
     EXPECT_EQ(1, doc_list.size());
+
+    std::filesystem::directory_entry expect_entry("/develop/test/file_root/test_root/test_file.md");
+    EXPECT_EQ(value_object::Document(expect_entry), doc_list.front());
 }
 }  // namespace search_doc::domain::test
