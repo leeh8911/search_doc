@@ -11,8 +11,8 @@
 
 #include <gtest/gtest.h>
 
-#include "src/document.h"
 #include "src/repository.h"
+#include "src/value_object/document.h"
 #include "test/mock/mock_file_root.h"
 #include "test/mock/mock_repository.h"
 

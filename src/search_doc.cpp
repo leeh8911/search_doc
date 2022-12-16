@@ -12,7 +12,7 @@
 #include <string>
 #include <utility>
 
-#include "src/document.h"
+#include "src/value_object/document.h"
 
 namespace search_doc::api {
 

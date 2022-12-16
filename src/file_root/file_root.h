@@ -15,7 +15,7 @@
 #include <set>
 #include <string>
 
-#include "src/document.h"
+#include "../value_object/document.h"
 
 namespace search_doc::domain {
 struct FileRoot {

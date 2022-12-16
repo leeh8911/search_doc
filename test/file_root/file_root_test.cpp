@@ -12,7 +12,9 @@
 
 #include <gtest/gtest.h>
 
-#include "src/document.h"
+#include <filesystem>
+
+#include "src/value_object/document.h"
 
 namespace search_doc::domain::test {
 

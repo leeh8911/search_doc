@@ -15,7 +15,7 @@
 #include <string>
 #include <utility>
 
-#include "src/document.h"
+#include "../value_object/document.h"
 
 namespace fs = std::filesystem;
 
@@ -27,9 +27,7 @@ value_object::DocumentList ActualFileRoot::Search() {
     value_object::DocumentList doc_list{};
     for (const fs::directory_entry& entry : fs::recursive_directory_iterator(fs::path(root_path_))) {
         if (extensions_.contains(entry.path().extension())) {
-            std::string file_path = entry.path().string();
-            std::set<std::string> keywords = {};
-            doc_list.emplace_back(file_path, keywords);
+            doc_list.emplace_back(entry);
         }
     }
 

@@ -7,8 +7,8 @@
 /// @copyright Copyright (c) 2022
 ///
 
-#ifndef SRC_DOCUMENT_H_
-#define SRC_DOCUMENT_H_
+#ifndef SRC_VALUE_OBJECT_DOCUMENT_H_
+#define SRC_VALUE_OBJECT_DOCUMENT_H_
 
 #include <set>
 #include <string>
@@ -17,7 +17,6 @@
 namespace search_doc::value_object {
 class Document {
  public:
-    explicit Document(std::string name, std::set<std::string> keywords = {});
 
     bool operator==(const Document& other) const;
     bool Contains(std::string keyword) const;
@@ -31,4 +30,4 @@ using DocumentList = std::vector<Document>;
 
 }  // namespace search_doc::value_object
 
-#endif  // SRC_DOCUMENT_H_
+#endif  // SRC_VALUE_OBJECT_DOCUMENT_H_

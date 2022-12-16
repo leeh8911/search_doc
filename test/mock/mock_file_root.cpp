@@ -10,7 +10,7 @@
 
 #include "test/mock/mock_file_root.h"
 
-#include "src/document.h"
+#include "src/value_object/document.h"
 
 namespace search_doc::test {
 value_object::DocumentList MockFileRoot::Search() {

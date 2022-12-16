@@ -7,13 +7,11 @@
 /// @copyright Copyright (c) 2022
 ///
 
-#include "src/document.h"
+#include "src/value_object/document.h"
 
 #include <string>
 #include <utility>
 namespace search_doc::value_object {
-Document::Document(std::string name, std::set<std::string> keywords)
-    : name_(std::move(name)), keywords_(std::move(keywords)) {}
 
 bool Document::operator==(const Document& other) const {
     if (name_ != other.name_) return false;

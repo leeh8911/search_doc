@@ -8,13 +8,13 @@
 ///
 ///
 
-#ifndef TEST_MOCK_REPOSITORY_H_
-#define TEST_MOCK_REPOSITORY_H_
+#ifndef TEST_MOCK_MOCK_REPOSITORY_H_
+#define TEST_MOCK_MOCK_REPOSITORY_H_
 
 #include <string>
 
-#include "src/document.h"
 #include "src/repository.h"
+#include "src/value_object/document.h"
 namespace search_doc::test {
 class MockRepository : public repository::Repository {
  public:
@@ -28,4 +28,4 @@ class MockRepository : public repository::Repository {
     value_object::DocumentList doc_list_{};
 };
 }  // namespace search_doc::test
-#endif  // TEST_MOCK_REPOSITORY_H_
+#endif  // TEST_MOCK_MOCK_REPOSITORY_H_
