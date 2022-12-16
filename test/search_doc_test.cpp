@@ -26,46 +26,7 @@ TEST(SearchDocTest, FindNoneKeywordInEmptyRepositoryCase) {
 }
 
 // TODO(sangwon): Document가 실제 파일을 기반으로 생성되어야 함(MockDocument가 필요할까?)
-TEST(SearchDocTest, FindKeywordInNoneEmptyRepositoryCase) {
-    EXPECT_TRUE(false);
-    // auto repo = std::make_unique<MockRepository>();
-
-    // value_object::DocumentList docs{};
-    // value_object::Document empty_keyword("empty keyword", std::set<std::string>{});
-    // value_object::Document manual("manual", std::set<std::string>{"something"});
-    // docs.emplace_back(empty_keyword);
-    // docs.emplace_back(manual);
-
-    // repo->Update(docs);
-
-    // api::SearchDoc sut(std::move(repo));
-
-    // auto result = sut.Find("something");
-
-    // EXPECT_EQ(1, result.size());
-    // EXPECT_EQ(manual, result.front());
-}
-
-// TODO(sangwon): Document가 실제 파일을 기반으로 생성되어야 함(MockDocument가 필요할까?)
-TEST(SearchDocTest, NonExistKeyword) {
-    EXPECT_TRUE(false);
-    // auto repo = std::make_unique<MockRepository>();
-
-    // value_object::DocumentList docs{};
-    // value_object::Document empty_keyword("empty keyword", std::set<std::string>{});
-    // value_object::Document manual("manual", std::set<std::string>{"something"});
-    // docs.emplace_back(empty_keyword);
-    // docs.emplace_back(manual);
-
-    // repo->Update(docs);
-
-    // api::SearchDoc sut(std::move(repo));
-
-    // auto result = sut.Find("blah");
-
-    // EXPECT_EQ(0, result.size());
-}
-
+// TODO(sangwon): SearchDoc 테스트를 단위테스트로 실행하기 위한 방법들을 고민해볼 필요가 있음.
 // TODO(sangwon): SearchDoc Collection 파일 시스템을 순회를 돌며 문서를 찾고, 문서 안에 포함된 키워드를 추출하는 작업을
 // 수행한다.
 // TODO(sangwon): 파일시스템에 대한 인터페이스 필요
