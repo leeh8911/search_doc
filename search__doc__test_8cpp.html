@@ -82,25 +82,30 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="search__doc_8h_source.html">src/search_doc.h</a>&quot;</code><br />
 <code>#include &lt;gtest/gtest.h&gt;</code><br />
-<code>#include &quot;<a class="el" href="document_8h_source.html">src/document.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="repository_8h_source.html">src/repository.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="mock__repository_8h_source.html">test/mock_repository.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="document_8h_source.html">src/value_object/document.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mock__file__root_8h_source.html">test/mock/mock_file_root.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="mock__repository_8h_source.html">test/mock/mock_repository.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for search_doc_test.cpp:</div>
 <div class="dyncontent">
 <div class="center"><img src="search__doc__test_8cpp__incl.png" border="0" usemap="#atest_2search__doc__test_8cpp" alt=""/></div>
 <map name="atest_2search__doc__test_8cpp" id="atest_2search__doc__test_8cpp">
-<area shape="rect" title=" " alt="" coords="302,5,485,32"/>
-<area shape="rect" href="search__doc_8h.html" title=" " alt="" coords="77,80,208,107"/>
-<area shape="rect" href="document_8h.html" title=" " alt="" coords="304,229,427,256"/>
-<area shape="rect" href="repository_8h.html" title=" " alt="" coords="255,155,377,181"/>
-<area shape="rect" title=" " alt="" coords="625,80,729,107"/>
-<area shape="rect" href="mock__repository_8h.html" title=" " alt="" coords="431,80,601,107"/>
-<area shape="rect" title=" " alt="" coords="180,155,231,181"/>
-<area shape="rect" title=" " alt="" coords="140,229,217,256"/>
-<area shape="rect" title=" " alt="" coords="249,304,308,331"/>
-<area shape="rect" title=" " alt="" coords="91,304,154,331"/>
-<area shape="rect" title=" " alt="" coords="344,304,387,331"/>
+<area shape="rect" title=" " alt="" coords="341,5,523,32"/>
+<area shape="rect" href="search__doc_8h.html" title=" " alt="" coords="316,80,447,107"/>
+<area shape="rect" href="document_8h.html" title=" " alt="" coords="174,229,373,256"/>
+<area shape="rect" href="repository_8h.html" title=" " alt="" coords="467,155,589,181"/>
+<area shape="rect" title=" " alt="" coords="756,80,860,107"/>
+<area shape="rect" href="mock__file__root_8h.html" title=" " alt="" coords="94,80,293,107"/>
+<area shape="rect" href="mock__repository_8h.html" title=" " alt="" coords="521,80,732,107"/>
+<area shape="rect" title=" " alt="" coords="5,304,56,331"/>
+<area shape="rect" title=" " alt="" coords="463,304,540,331"/>
+<area shape="rect" title=" " alt="" coords="583,304,641,331"/>
+<area shape="rect" title=" " alt="" coords="81,304,143,331"/>
+<area shape="rect" href="file__root_8h.html" title=" " alt="" coords="174,155,341,181"/>
+<area shape="rect" title=" " alt="" coords="168,304,211,331"/>
+<area shape="rect" title=" " alt="" coords="235,304,325,331"/>
+<area shape="rect" title=" " alt="" coords="349,304,429,331"/>
 </map>
 </div>
 </div><table class="memberdecls">
@@ -115,6 +120,10 @@ Namespaces</h2></td></tr>
 Functions</h2></td></tr>
 <tr class="memitem:a8cc7ab80e96e17181a3b89a0710f1562"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesearch__doc_1_1test.html#a8cc7ab80e96e17181a3b89a0710f1562">TEST</a> (SearchDocTest, FindNoneKeywordInEmptyRepositoryCase)</td></tr>
 <tr class="separator:a8cc7ab80e96e17181a3b89a0710f1562"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a228c9866c73dda2baaed2a20a1cefd9c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesearch__doc_1_1test.html#a228c9866c73dda2baaed2a20a1cefd9c">TEST</a> (SearchDocTest, CollectNoneFilesCase)</td></tr>
+<tr class="separator:a228c9866c73dda2baaed2a20a1cefd9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7a40bbd47e32fe4a10db49c09e2c0e2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesearch__doc_1_1test.html#af7a40bbd47e32fe4a10db49c09e2c0e2">TEST</a> (SearchDocTest, CollectSingleFileCase)</td></tr>
+<tr class="separator:af7a40bbd47e32fe4a10db49c09e2c0e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>sangwon (<a href="#" onclick="location.href='mai'+'lto:'+'lee'+'h8'+'911'+'@g'+'mai'+'l.'+'com'; return false;">leeh8<span style="display: none;">.nosp@m.</span>911@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>

@@ -75,43 +75,93 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#friends">Friends</a> &#124;
 <a href="classsearch__doc_1_1value__object_1_1Document-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Document Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html" title="Document class.">Document</a> class.  
+ <a href="classsearch__doc_1_1value__object_1_1Document.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="document_8h_source.html">document.h</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for Document:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsearch__doc_1_1value__object_1_1Document__inherit__graph.png" border="0" usemap="#aDocument_inherit__map" alt="Inheritance graph"/></div>
+<map name="aDocument_inherit__map" id="aDocument_inherit__map">
+<area shape="rect" title="Document class." alt="" coords="11,233,422,487"/>
+<area shape="rect" href="structsearch__doc_1_1value__object_1_1IDocument.html" title="Document 클래스의 인터페이스이다." alt="" coords="5,5,428,185"/>
+</map>
+</div>
 <div class="dynheader">
 Collaboration diagram for Document:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsearch__doc_1_1value__object_1_1Document__coll__graph.png" border="0" usemap="#aDocument_coll__map" alt="Collaboration graph"/></div>
 <map name="aDocument_coll__map" id="aDocument_coll__map">
-<area shape="rect" title=" " alt="" coords="5,425,469,503"/>
-<area shape="rect" title=" " alt="" coords="294,285,431,363"/>
-<area shape="rect" title=" " alt="" coords="197,145,256,223"/>
-<area shape="rect" title=" " alt="" coords="147,5,307,83"/>
-<area shape="rect" title=" " alt="" coords="322,145,403,223"/>
-<area shape="rect" title=" " alt="" coords="343,5,382,83"/>
+<area shape="rect" title="Document class." alt="" coords="502,668,913,877"/>
+<area shape="rect" href="structsearch__doc_1_1value__object_1_1IDocument.html" title="Document 클래스의 인터페이스이다." alt="" coords="5,425,428,605"/>
+<area shape="rect" title=" " alt="" coords="452,477,723,554"/>
+<area shape="rect" title=" " alt="" coords="387,285,497,363"/>
+<area shape="rect" title=" " alt="" coords="317,145,377,223"/>
+<area shape="rect" title=" " alt="" coords="401,145,483,223"/>
+<area shape="rect" title=" " alt="" coords="461,5,500,83"/>
+<area shape="rect" title=" " alt="" coords="507,145,614,223"/>
+<area shape="rect" title=" " alt="" coords="801,285,859,363"/>
+<area shape="rect" title=" " alt="" coords="750,145,910,223"/>
+<area shape="rect" title=" " alt="" coords="575,5,613,83"/>
+<area shape="rect" title=" " alt="" coords="849,477,963,554"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a78a581a3cf7505e16cf1306bff1ec92b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#a78a581a3cf7505e16cf1306bff1ec92b">Document</a> (std::string name, std::set&lt; std::string &gt; keywords={})</td></tr>
-<tr class="separator:a78a581a3cf7505e16cf1306bff1ec92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a15b6afb0f44219c691f56227f8fecac5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#a15b6afb0f44219c691f56227f8fecac5">Document</a> (std::string fullfile)</td></tr>
+<tr class="separator:a15b6afb0f44219c691f56227f8fecac5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a341d9f1a1fe3e33e23b8835508cb3894"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#a341d9f1a1fe3e33e23b8835508cb3894">Document</a> (const fs::directory_entry &amp;entry)</td></tr>
+<tr class="separator:a341d9f1a1fe3e33e23b8835508cb3894"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e700252a52bae95384ad0501e1dfd6b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#a5e700252a52bae95384ad0501e1dfd6b">operator==</a> (const <a class="el" href="structsearch__doc_1_1value__object_1_1IDocument.html">IDocument</a> &amp;other) const override</td></tr>
+<tr class="separator:a5e700252a52bae95384ad0501e1dfd6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f0f1517cc12f5657d4636bf7f797540"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#a0f0f1517cc12f5657d4636bf7f797540">Contains</a> (std::string keyword) const override</td></tr>
+<tr class="separator:a0f0f1517cc12f5657d4636bf7f797540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:af6c796e93970e75b0cf8d88a49edb30e"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#af6c796e93970e75b0cf8d88a49edb30e">Name</a> () const override</td></tr>
+<tr class="separator:af6c796e93970e75b0cf8d88a49edb30e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a0e97d7e559299cc7757a9887896262"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#a5a0e97d7e559299cc7757a9887896262">Path</a> () const override</td></tr>
+<tr class="separator:a5a0e97d7e559299cc7757a9887896262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae085c3ca28b00059cc2f25031f17063a"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::set&lt; size_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#ae085c3ca28b00059cc2f25031f17063a">KeywordMap</a> () const override</td></tr>
+<tr class="separator:ae085c3ca28b00059cc2f25031f17063a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bf492db0eb4f3af57664bda076de99f"><td class="memItemLeft" align="right" valign="top">fs::file_time_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#a9bf492db0eb4f3af57664bda076de99f">Filetime</a> () const override</td></tr>
+<tr class="separator:a9bf492db0eb4f3af57664bda076de99f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab317462bf7f1811cdcb7ac1f17e5b28b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#ab317462bf7f1811cdcb7ac1f17e5b28b">Read</a> ()</td></tr>
+<tr class="separator:ab317462bf7f1811cdcb7ac1f17e5b28b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a4d739cc5d335052eb9f5b2ca559b81d1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#a4d739cc5d335052eb9f5b2ca559b81d1">name_</a> {}</td></tr>
 <tr class="separator:a4d739cc5d335052eb9f5b2ca559b81d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a881e3d3dd6a4745168f1af3de956b868"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#a881e3d3dd6a4745168f1af3de956b868">keywords_</a> {}</td></tr>
-<tr class="separator:a881e3d3dd6a4745168f1af3de956b868"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a679ba61b4152f83a46a4bb88b1cd7ca1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#a679ba61b4152f83a46a4bb88b1cd7ca1">path_</a> {}</td></tr>
+<tr class="separator:a679ba61b4152f83a46a4bb88b1cd7ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa9174f5192011197be1956db644a976"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, std::set&lt; size_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#aaa9174f5192011197be1956db644a976">keyword_map_</a> {}</td></tr>
+<tr class="separator:aaa9174f5192011197be1956db644a976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9557e51d94d9c90034853b15c66a8d1"><td class="memItemLeft" align="right" valign="top">fs::file_time_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#ae9557e51d94d9c90034853b15c66a8d1">filetime_</a> {}</td></tr>
+<tr class="separator:ae9557e51d94d9c90034853b15c66a8d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
+Friends</h2></td></tr>
+<tr class="memitem:a278308e5ad27667f48b2daf57dd1b254"><td class="memItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html#a278308e5ad27667f48b2daf57dd1b254">operator&lt;&lt;</a> (std::ostream &amp;os, const <a class="el" href="classsearch__doc_1_1value__object_1_1Document.html">Document</a> &amp;doc)</td></tr>
+<tr class="separator:a278308e5ad27667f48b2daf57dd1b254"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a78a581a3cf7505e16cf1306bff1ec92b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a78a581a3cf7505e16cf1306bff1ec92b">&#9670;&nbsp;</a></span>Document()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html" title="Document class.">Document</a> class. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a15b6afb0f44219c691f56227f8fecac5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a15b6afb0f44219c691f56227f8fecac5">&#9670;&nbsp;</a></span>Document() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -123,13 +173,266 @@ Private Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html">Document</a> </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
+          <td class="paramname"><em>fullfile</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a341d9f1a1fe3e33e23b8835508cb3894"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a341d9f1a1fe3e33e23b8835508cb3894">&#9670;&nbsp;</a></span>Document() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html">Document</a> </td>
+          <td>(</td>
+          <td class="paramtype">const fs::directory_entry &amp;&#160;</td>
+          <td class="paramname"><em>entry</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5e700252a52bae95384ad0501e1dfd6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e700252a52bae95384ad0501e1dfd6b">&#9670;&nbsp;</a></span>operator==()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structsearch__doc_1_1value__object_1_1IDocument.html">IDocument</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="structsearch__doc_1_1value__object_1_1IDocument.html#a86687fa8586086502b92d65f573125b5">IDocument</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsearch__doc_1_1value__object_1_1Document_a5e700252a52bae95384ad0501e1dfd6b_cgraph.png" border="0" usemap="#aclasssearch__doc_1_1value__object_1_1Document_a5e700252a52bae95384ad0501e1dfd6b_cgraph" alt=""/></div>
+<map name="aclasssearch__doc_1_1value__object_1_1Document_a5e700252a52bae95384ad0501e1dfd6b_cgraph" id="aclasssearch__doc_1_1value__object_1_1Document_a5e700252a52bae95384ad0501e1dfd6b_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,104,57"/>
+<area shape="rect" href="structsearch__doc_1_1value__object_1_1IDocument.html#a4ded0a31f0ec9d3ecf5feb88a0f565a4" title=" " alt="" coords="152,5,479,32"/>
+<area shape="rect" href="structsearch__doc_1_1value__object_1_1IDocument.html#a70ee001ce76c53aebb215a9f51653ab3" title=" " alt="" coords="159,56,471,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a0f0f1517cc12f5657d4636bf7f797540"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f0f1517cc12f5657d4636bf7f797540">&#9670;&nbsp;</a></span>Contains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Contains </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>keyword</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="structsearch__doc_1_1value__object_1_1IDocument.html#a3b8f2802692a6a8a053ee2c51dc2fae0">IDocument</a>.</p>
+
+</div>
+</div>
+<a id="af6c796e93970e75b0cf8d88a49edb30e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c796e93970e75b0cf8d88a49edb30e">&#9670;&nbsp;</a></span>Name()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Name </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="structsearch__doc_1_1value__object_1_1IDocument.html#a70ee001ce76c53aebb215a9f51653ab3">IDocument</a>.</p>
+
+</div>
+</div>
+<a id="a5a0e97d7e559299cc7757a9887896262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a0e97d7e559299cc7757a9887896262">&#9670;&nbsp;</a></span>Path()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Path </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="structsearch__doc_1_1value__object_1_1IDocument.html#af68114017b441338f3cd7fa1f8e5dcdb">IDocument</a>.</p>
+
+</div>
+</div>
+<a id="ae085c3ca28b00059cc2f25031f17063a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae085c3ca28b00059cc2f25031f17063a">&#9670;&nbsp;</a></span>KeywordMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt; std::string, std::set&lt; size_t &gt; &gt; KeywordMap </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="structsearch__doc_1_1value__object_1_1IDocument.html#af2ec3d2a43a0e0c0393933b6ab9fee96">IDocument</a>.</p>
+
+</div>
+</div>
+<a id="a9bf492db0eb4f3af57664bda076de99f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bf492db0eb4f3af57664bda076de99f">&#9670;&nbsp;</a></span>Filetime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">fs::file_time_type Filetime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">private</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="structsearch__doc_1_1value__object_1_1IDocument.html#a4ded0a31f0ec9d3ecf5feb88a0f565a4">IDocument</a>.</p>
+
+</div>
+</div>
+<a id="ab317462bf7f1811cdcb7ac1f17e5b28b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab317462bf7f1811cdcb7ac1f17e5b28b">&#9670;&nbsp;</a></span>Read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Read </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a278308e5ad27667f48b2daf57dd1b254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a278308e5ad27667f48b2daf57dd1b254">&#9670;&nbsp;</a></span>operator&lt;&lt;</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>os</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::set&lt; std::string &gt;&#160;</td>
-          <td class="paramname"><em>keywords</em> = <code>{}</code>&#160;</td>
+          <td class="paramtype">const <a class="el" href="classsearch__doc_1_1value__object_1_1Document.html">Document</a> &amp;&#160;</td>
+          <td class="paramname"><em>doc</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -139,7 +442,7 @@ Private Attributes</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span></span>  </td>
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -169,8 +472,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a881e3d3dd6a4745168f1af3de956b868"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a881e3d3dd6a4745168f1af3de956b868">&#9670;&nbsp;</a></span>keywords_</h2>
+<a id="a679ba61b4152f83a46a4bb88b1cd7ca1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a679ba61b4152f83a46a4bb88b1cd7ca1">&#9670;&nbsp;</a></span>path_</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,7 +482,51 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::set&lt;std::string&gt; keywords_ {}</td>
+          <td class="memname">std::string path_ {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaa9174f5192011197be1956db644a976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa9174f5192011197be1956db644a976">&#9670;&nbsp;</a></span>keyword_map_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, std::set&lt;size_t&gt; &gt; keyword_map_ {}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae9557e51d94d9c90034853b15c66a8d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9557e51d94d9c90034853b15c66a8d1">&#9670;&nbsp;</a></span>filetime_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">fs::file_time_type filetime_ {}</td>
         </tr>
       </table>
   </td>
@@ -192,8 +539,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src/<a class="el" href="document_8h_source.html">document.h</a></li>
-<li>src/<a class="el" href="document_8cpp.html">document.cpp</a></li>
+<li>src/value_object/<a class="el" href="document_8h_source.html">document.h</a></li>
+<li>src/value_object/<a class="el" href="document_8cpp.html">document.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

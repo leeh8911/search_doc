@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['repositoryptr_95',['RepositoryPtr',['../namespacesearch__doc_1_1repository.html#a8a5b3948347a051ef4399777bce7b86d',1,'search_doc::repository']]]
+  ['filerootptr_154',['FileRootPtr',['../namespacesearch__doc_1_1domain.html#a8684de288c2273dca85328c17fabaa65',1,'search_doc::domain']]]
 ];

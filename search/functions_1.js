@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['document_75',['Document',['../classsearch__doc_1_1value__object_1_1Document.html#a78a581a3cf7505e16cf1306bff1ec92b',1,'search_doc::value_object::Document']]]
+  ['collect_116',['Collect',['../classsearch__doc_1_1api_1_1SearchDoc.html#addf2a36a76b93276923c5185d5512cdf',1,'search_doc::api::SearchDoc']]],
+  ['contains_117',['Contains',['../structsearch__doc_1_1value__object_1_1IDocument.html#a3b8f2802692a6a8a053ee2c51dc2fae0',1,'search_doc::value_object::IDocument::Contains()'],['../classsearch__doc_1_1value__object_1_1Document.html#a0f0f1517cc12f5657d4636bf7f797540',1,'search_doc::value_object::Document::Contains()']]]
 ];

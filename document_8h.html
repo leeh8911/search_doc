@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Search Doc: src/document.h File Reference</title>
+<title>Search Doc: src/value_object/document.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e2bcd0f96559a1b2d0ba555cfedf90b7.html">value_object</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -81,33 +81,46 @@ $(function() {
 <div class="title">document.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;set&gt;</code><br />
+<div class="textblock"><code>#include &lt;filesystem&gt;</code><br />
+<code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;map&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &lt;set&gt;</code><br />
 <code>#include &lt;string&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for document.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="document_8h__incl.png" border="0" usemap="#asrc_2document_8h" alt=""/></div>
-<map name="asrc_2document_8h" id="asrc_2document_8h">
-<area shape="rect" title=" " alt="" coords="40,5,163,32"/>
-<area shape="rect" title=" " alt="" coords="5,80,48,107"/>
-<area shape="rect" title=" " alt="" coords="72,80,131,107"/>
-<area shape="rect" title=" " alt="" coords="155,80,218,107"/>
+<div class="center"><img src="document_8h__incl.png" border="0" usemap="#asrc_2value__object_2document_8h" alt=""/></div>
+<map name="asrc_2value__object_2document_8h" id="asrc_2value__object_2document_8h">
+<area shape="rect" title=" " alt="" coords="233,5,442,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,96,107"/>
+<area shape="rect" title=" " alt="" coords="120,80,200,107"/>
+<area shape="rect" title=" " alt="" coords="224,80,275,107"/>
+<area shape="rect" title=" " alt="" coords="299,80,376,107"/>
+<area shape="rect" title=" " alt="" coords="400,80,443,107"/>
+<area shape="rect" title=" " alt="" coords="467,80,525,107"/>
+<area shape="rect" title=" " alt="" coords="550,80,613,107"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="document_8h__dep__incl.png" border="0" usemap="#asrc_2document_8hdep" alt=""/></div>
-<map name="asrc_2document_8hdep" id="asrc_2document_8hdep">
-<area shape="rect" title=" " alt="" coords="227,5,350,32"/>
-<area shape="rect" href="document_8cpp.html" title=" " alt="" coords="5,80,143,107"/>
-<area shape="rect" href="repository_8h.html" title=" " alt="" coords="277,80,399,107"/>
-<area shape="rect" href="search__doc_8h.html" title=" " alt="" coords="218,155,349,181"/>
-<area shape="rect" href="search__doc_8cpp.html" title=" " alt="" coords="117,229,263,256"/>
-<area shape="rect" href="search__doc__test_8cpp.html" title=" " alt="" coords="295,229,477,256"/>
-<area shape="rect" href="mock__repository_8h.html" title=" " alt="" coords="474,155,645,181"/>
-<area shape="rect" href="mock__repository_8cpp.html" title=" " alt="" coords="501,229,687,256"/>
+<div class="center"><img src="document_8h__dep__incl.png" border="0" usemap="#asrc_2value__object_2document_8hdep" alt=""/></div>
+<map name="asrc_2value__object_2document_8hdep" id="asrc_2value__object_2document_8hdep">
+<area shape="rect" title=" " alt="" coords="575,5,784,32"/>
+<area shape="rect" href="file__root_8cpp.html" title=" " alt="" coords="57,155,240,181"/>
+<area shape="rect" href="file__root_8h.html" title=" " alt="" coords="524,80,691,107"/>
+<area shape="rect" href="search__doc_8h.html" title=" " alt="" coords="730,155,861,181"/>
+<area shape="rect" href="search__doc_8cpp.html" title=" " alt="" coords="495,229,640,256"/>
+<area shape="rect" href="search__doc__test_8cpp.html" title=" " alt="" coords="789,229,972,256"/>
+<area shape="rect" href="file__root__test_8cpp.html" title=" " alt="" coords="264,155,484,181"/>
+<area shape="rect" href="mock__file__root_8cpp.html" title=" " alt="" coords="5,229,220,256"/>
+<area shape="rect" href="repository_8h.html" title=" " alt="" coords="784,80,905,107"/>
+<area shape="rect" href="mock__repository_8h.html" title=" " alt="" coords="986,155,1197,181"/>
+<area shape="rect" href="document_8cpp.html" title=" " alt="" coords="1037,80,1261,107"/>
+<area shape="rect" href="mock__file__root_8h.html" title=" " alt="" coords="508,155,707,181"/>
+<area shape="rect" href="mock__repository_8cpp.html" title=" " alt="" coords="996,229,1221,256"/>
 </map>
 </div>
 </div>
@@ -115,7 +128,11 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structsearch__doc_1_1value__object_1_1IDocument.html">IDocument</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html" title="Document class.">Document</a> 클래스의 인터페이스이다.  <a href="structsearch__doc_1_1value__object_1_1IDocument.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html">Document</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classsearch__doc_1_1value__object_1_1Document.html" title="Document class.">Document</a> class.  <a href="classsearch__doc_1_1value__object_1_1Document.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
@@ -127,8 +144,10 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
-<tr class="memitem:a93e86afaf6bb2de74b77dced3d93ebf9"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesearch__doc_1_1value__object.html#a93e86afaf6bb2de74b77dced3d93ebf9">DocumentList</a> = std::vector&lt; Document &gt;</td></tr>
-<tr class="separator:a93e86afaf6bb2de74b77dced3d93ebf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60171aff89ecd58f40540e0e5a82013"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesearch__doc_1_1value__object.html#ad60171aff89ecd58f40540e0e5a82013">DocumentPtr</a> = std::shared_ptr&lt; Document &gt;</td></tr>
+<tr class="separator:ad60171aff89ecd58f40540e0e5a82013"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61d2ea13550d7dd5603df45990f03c9a"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacesearch__doc_1_1value__object.html#a61d2ea13550d7dd5603df45990f03c9a">DocumentList</a> = std::vector&lt; DocumentPtr &gt;</td></tr>
+<tr class="separator:a61d2ea13550d7dd5603df45990f03c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>sangwon (<a href="#" onclick="location.href='mai'+'lto:'+'lee'+'h8'+'911'+'@g'+'mai'+'l.'+'com'; return false;">leeh8<span style="display: none;">.nosp@m.</span>911@<span style="display: none;">.nosp@m.</span>gmail<span style="display: none;">.nosp@m.</span>.com</a>) </dd></dl>

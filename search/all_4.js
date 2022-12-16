@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['find_14',['Find',['../classsearch__doc_1_1api_1_1SearchDoc.html#aefe74a733aa57c1911a5474d616a4d94',1,'search_doc::api::SearchDoc']]]
+  ['extensions_5f_17',['extensions_',['../classsearch__doc_1_1domain_1_1ActualFileRoot.html#ae9bcfb54cbc6bdef9190125e032d19ce',1,'search_doc::domain::ActualFileRoot']]]
 ];

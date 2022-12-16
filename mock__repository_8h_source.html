@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Search Doc: test/mock_repository.h Source File</title>
+<title>Search Doc: test/mock/mock_repository.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,7 +69,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_13e138d54eb8818da29c3992edef070a.html">test</a></li><li class="navelem"><a class="el" href="dir_3e549de7bf04e327a3b7c3be8c49a8c1.html">mock</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -78,36 +78,36 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <a href="mock__repository_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef TEST_MOCK_REPOSITORY_H_</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define TEST_MOCK_REPOSITORY_H_</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#ifndef TEST_MOCK_MOCK_REPOSITORY_H_</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#define TEST_MOCK_MOCK_REPOSITORY_H_</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="document_8h.html">src/document.h</a>&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="repository_8h.html">src/repository.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="repository_8h.html">src/repository.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="document_8h.html">src/value_object/document.h</a>&quot;</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacesearch__doc_1_1test.html">search_doc::test</a> {</div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classsearch__doc_1_1test_1_1MockRepository.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classsearch__doc_1_1test_1_1MockRepository.html">MockRepository</a> : <span class="keyword">public</span> <a class="code" href="structsearch__doc_1_1repository_1_1Repository.html">repository::Repository</a> {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classsearch__doc_1_1test_1_1MockRepository.html#a9480badea1cbcb8e118c4287173dc454">   21</a></span>&#160;    <a class="code" href="classsearch__doc_1_1test_1_1MockRepository.html#a9480badea1cbcb8e118c4287173dc454">~MockRepository</a>() <span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classsearch__doc_1_1test_1_1MockRepository.html#a82b0aedc8b0dbc4995d20d6ae4c3faa0">   22</a></span>&#160;    <a class="code" href="classsearch__doc_1_1test_1_1MockRepository.html#a82b0aedc8b0dbc4995d20d6ae4c3faa0">MockRepository</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="namespacesearch__doc_1_1value__object.html#a93e86afaf6bb2de74b77dced3d93ebf9">value_object::DocumentList</a> <a class="code" href="classsearch__doc_1_1test_1_1MockRepository.html#a07a84667f179d1aaddc86795f210e9ae">Query</a>(std::string name) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsearch__doc_1_1test_1_1MockRepository.html#a2b09e3822f9b0171c0cc541330de20f4">Update</a>(<span class="keyword">const</span> <a class="code" href="namespacesearch__doc_1_1value__object.html#a93e86afaf6bb2de74b77dced3d93ebf9">value_object::DocumentList</a>&amp; doc_list) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="namespacesearch__doc_1_1value__object.html#a61d2ea13550d7dd5603df45990f03c9a">value_object::DocumentList</a> <a class="code" href="classsearch__doc_1_1test_1_1MockRepository.html#a07a84667f179d1aaddc86795f210e9ae">Query</a>(std::string name) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classsearch__doc_1_1test_1_1MockRepository.html#a2b09e3822f9b0171c0cc541330de20f4">Update</a>(<span class="keyword">const</span> <a class="code" href="namespacesearch__doc_1_1value__object.html#a61d2ea13550d7dd5603df45990f03c9a">value_object::DocumentList</a>&amp; doc_list) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classsearch__doc_1_1test_1_1MockRepository.html#aa2d172313593143e80f86f4f62724cfc">   28</a></span>&#160;    <a class="code" href="namespacesearch__doc_1_1value__object.html#a93e86afaf6bb2de74b77dced3d93ebf9">value_object::DocumentList</a> <a class="code" href="classsearch__doc_1_1test_1_1MockRepository.html#aa2d172313593143e80f86f4f62724cfc">doc_list_</a>{};</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classsearch__doc_1_1test_1_1MockRepository.html#aa2d172313593143e80f86f4f62724cfc">   28</a></span>&#160;    <a class="code" href="namespacesearch__doc_1_1value__object.html#a61d2ea13550d7dd5603df45990f03c9a">value_object::DocumentList</a> <a class="code" href="classsearch__doc_1_1test_1_1MockRepository.html#aa2d172313593143e80f86f4f62724cfc">doc_list_</a>{};</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}  <span class="comment">// namespace search_doc::test</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// TEST_MOCK_REPOSITORY_H_</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// TEST_MOCK_MOCK_REPOSITORY_H_</span></div>
 <div class="ttc" id="aclasssearch__doc_1_1test_1_1MockRepository_html"><div class="ttname"><a href="classsearch__doc_1_1test_1_1MockRepository.html">search_doc::test::MockRepository</a></div><div class="ttdef"><b>Definition:</b> mock_repository.h:19</div></div>
 <div class="ttc" id="aclasssearch__doc_1_1test_1_1MockRepository_html_a07a84667f179d1aaddc86795f210e9ae"><div class="ttname"><a href="classsearch__doc_1_1test_1_1MockRepository.html#a07a84667f179d1aaddc86795f210e9ae">search_doc::test::MockRepository::Query</a></div><div class="ttdeci">value_object::DocumentList Query(std::string name) override</div><div class="ttdef"><b>Definition:</b> mock_repository.cpp:15</div></div>
-<div class="ttc" id="aclasssearch__doc_1_1test_1_1MockRepository_html_a2b09e3822f9b0171c0cc541330de20f4"><div class="ttname"><a href="classsearch__doc_1_1test_1_1MockRepository.html#a2b09e3822f9b0171c0cc541330de20f4">search_doc::test::MockRepository::Update</a></div><div class="ttdeci">void Update(const value_object::DocumentList &amp;doc_list) override</div><div class="ttdef"><b>Definition:</b> mock_repository.cpp:17</div></div>
+<div class="ttc" id="aclasssearch__doc_1_1test_1_1MockRepository_html_a2b09e3822f9b0171c0cc541330de20f4"><div class="ttname"><a href="classsearch__doc_1_1test_1_1MockRepository.html#a2b09e3822f9b0171c0cc541330de20f4">search_doc::test::MockRepository::Update</a></div><div class="ttdeci">void Update(const value_object::DocumentList &amp;doc_list) override</div><div class="ttdef"><b>Definition:</b> mock_repository.cpp:27</div></div>
 <div class="ttc" id="aclasssearch__doc_1_1test_1_1MockRepository_html_a82b0aedc8b0dbc4995d20d6ae4c3faa0"><div class="ttname"><a href="classsearch__doc_1_1test_1_1MockRepository.html#a82b0aedc8b0dbc4995d20d6ae4c3faa0">search_doc::test::MockRepository::MockRepository</a></div><div class="ttdeci">MockRepository()=default</div></div>
 <div class="ttc" id="aclasssearch__doc_1_1test_1_1MockRepository_html_a9480badea1cbcb8e118c4287173dc454"><div class="ttname"><a href="classsearch__doc_1_1test_1_1MockRepository.html#a9480badea1cbcb8e118c4287173dc454">search_doc::test::MockRepository::~MockRepository</a></div><div class="ttdeci">~MockRepository() override=default</div></div>
 <div class="ttc" id="aclasssearch__doc_1_1test_1_1MockRepository_html_aa2d172313593143e80f86f4f62724cfc"><div class="ttname"><a href="classsearch__doc_1_1test_1_1MockRepository.html#aa2d172313593143e80f86f4f62724cfc">search_doc::test::MockRepository::doc_list_</a></div><div class="ttdeci">value_object::DocumentList doc_list_</div><div class="ttdef"><b>Definition:</b> mock_repository.h:28</div></div>
 <div class="ttc" id="adocument_8h_html"><div class="ttname"><a href="document_8h.html">document.h</a></div></div>
-<div class="ttc" id="anamespacesearch__doc_1_1test_html"><div class="ttname"><a href="namespacesearch__doc_1_1test.html">search_doc::test</a></div><div class="ttdef"><b>Definition:</b> mock_repository.cpp:14</div></div>
-<div class="ttc" id="anamespacesearch__doc_1_1value__object_html_a93e86afaf6bb2de74b77dced3d93ebf9"><div class="ttname"><a href="namespacesearch__doc_1_1value__object.html#a93e86afaf6bb2de74b77dced3d93ebf9">search_doc::value_object::DocumentList</a></div><div class="ttdeci">std::vector&lt; Document &gt; DocumentList</div><div class="ttdef"><b>Definition:</b> document.h:27</div></div>
+<div class="ttc" id="anamespacesearch__doc_1_1test_html"><div class="ttname"><a href="namespacesearch__doc_1_1test.html">search_doc::test</a></div><div class="ttdef"><b>Definition:</b> mock_file_root.cpp:15</div></div>
+<div class="ttc" id="anamespacesearch__doc_1_1value__object_html_a61d2ea13550d7dd5603df45990f03c9a"><div class="ttname"><a href="namespacesearch__doc_1_1value__object.html#a61d2ea13550d7dd5603df45990f03c9a">search_doc::value_object::DocumentList</a></div><div class="ttdeci">std::vector&lt; DocumentPtr &gt; DocumentList</div><div class="ttdef"><b>Definition:</b> document.h:67</div></div>
 <div class="ttc" id="arepository_8h_html"><div class="ttname"><a href="repository_8h.html">repository.h</a></div></div>
 <div class="ttc" id="astructsearch__doc_1_1repository_1_1Repository_html"><div class="ttname"><a href="structsearch__doc_1_1repository_1_1Repository.html">search_doc::repository::Repository</a></div><div class="ttdoc">데이터베이스를 다루기 위한 인터페이스 클래스</div><div class="ttdef"><b>Definition:</b> repository.h:22</div></div>
 </div><!-- fragment --></div><!-- contents -->

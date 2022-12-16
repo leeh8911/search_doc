@@ -1,10 +1,13 @@
 <map id="src/search_doc.h" name="src/search_doc.h">
-<area shape="rect" id="node1" title=" " alt="" coords="131,5,261,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,80,56,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="131,155,208,181"/>
-<area shape="rect" id="node4" title=" " alt="" coords="216,229,275,256"/>
-<area shape="rect" id="node5" title=" " alt="" coords="401,229,463,256"/>
-<area shape="rect" id="node6" href="$document_8h.html" title=" " alt="" coords="283,155,405,181"/>
-<area shape="rect" id="node8" href="$repository_8h.html" title=" " alt="" coords="185,80,306,107"/>
-<area shape="rect" id="node7" title=" " alt="" coords="323,229,365,256"/>
+<area shape="rect" id="node1" title=" " alt="" coords="243,5,373,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,229,56,256"/>
+<area shape="rect" id="node3" title=" " alt="" coords="87,229,164,256"/>
+<area shape="rect" id="node4" title=" " alt="" coords="513,229,572,256"/>
+<area shape="rect" id="node5" title=" " alt="" coords="607,229,670,256"/>
+<area shape="rect" id="node6" href="$file__root_8h.html" title=" " alt="" coords="393,80,559,107"/>
+<area shape="rect" id="node8" href="$document_8h.html" title=" " alt="" coords="210,155,409,181"/>
+<area shape="rect" id="node11" href="$repository_8h.html" title=" " alt="" coords="247,80,369,107"/>
+<area shape="rect" id="node7" title=" " alt="" coords="441,229,484,256"/>
+<area shape="rect" id="node9" title=" " alt="" coords="315,229,405,256"/>
+<area shape="rect" id="node10" title=" " alt="" coords="211,229,291,256"/>
 </map>

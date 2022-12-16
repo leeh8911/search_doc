@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['readme_2emd_31',['readme.md',['../readme_8md.html',1,'']]],
-  ['repo_5f_32',['repo_',['../classsearch__doc_1_1api_1_1SearchDoc.html#ab089a41e0c355cd23009a22119a22f68',1,'search_doc::api::SearchDoc']]],
-  ['repository_33',['Repository',['../structsearch__doc_1_1repository_1_1Repository.html',1,'search_doc::repository']]],
-  ['repository_2eh_34',['repository.h',['../repository_8h.html',1,'']]],
-  ['repositoryptr_35',['RepositoryPtr',['../namespacesearch__doc_1_1repository.html#a8a5b3948347a051ef4399777bce7b86d',1,'search_doc::repository']]]
+  ['path_48',['Path',['../structsearch__doc_1_1value__object_1_1IDocument.html#af68114017b441338f3cd7fa1f8e5dcdb',1,'search_doc::value_object::IDocument::Path()'],['../classsearch__doc_1_1value__object_1_1Document.html#a5a0e97d7e559299cc7757a9887896262',1,'search_doc::value_object::Document::Path() const override']]],
+  ['path_5f_49',['path_',['../classsearch__doc_1_1value__object_1_1Document.html#a679ba61b4152f83a46a4bb88b1cd7ca1',1,'search_doc::value_object::Document']]],
+  ['platform_5fid_50',['PLATFORM_ID',['../CMakeCCompilerId_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCXXCompilerId.cpp']]]
 ];

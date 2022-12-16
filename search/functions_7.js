@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['update_82',['Update',['../structsearch__doc_1_1repository_1_1Repository.html#af7447b90fbff58930892f928c386d3f0',1,'search_doc::repository::Repository::Update()'],['../classsearch__doc_1_1test_1_1MockRepository.html#a2b09e3822f9b0171c0cc541330de20f4',1,'search_doc::test::MockRepository::Update()']]]
+  ['operator_3c_3c_125',['operator&lt;&lt;',['../namespacesearch__doc_1_1value__object.html#a94a7a410e21bb148d2ffd8f6a34864a4',1,'search_doc::value_object']]],
+  ['operator_3d_3d_126',['operator==',['../structsearch__doc_1_1value__object_1_1IDocument.html#a86687fa8586086502b92d65f573125b5',1,'search_doc::value_object::IDocument::operator==()'],['../classsearch__doc_1_1value__object_1_1Document.html#a5e700252a52bae95384ad0501e1dfd6b',1,'search_doc::value_object::Document::operator==()']]]
 ];
