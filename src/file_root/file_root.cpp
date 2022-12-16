@@ -17,12 +17,21 @@
 
 #include "src/document.h"
 
+namespace fs = std::filesystem;
+
 namespace search_doc::domain {
 ActualFileRoot::ActualFileRoot(std::string root_path, std::set<std::string> extensions)
     : root_path_(std::move(root_path)), extensions_(std::move(extensions)) {}
 
 value_object::DocumentList ActualFileRoot::Search() {
     value_object::DocumentList doc_list{};
+    for (const fs::directory_entry& entry : fs::recursive_directory_iterator(fs::path(root_path_))) {
+        if (extensions_.contains(entry.path().extension())) {
+            std::string file_path = entry.path().string();
+            std::set<std::string> keywords = {};
+            doc_list.emplace_back(file_path, keywords);
+        }
+    }
 
     return doc_list;
 }

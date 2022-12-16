@@ -17,7 +17,7 @@
 namespace search_doc::domain::test {
 
 TEST(ActualFileRootTest, TotalFilesCase) {
-    ActualFileRoot sut("./test_root", {"md"});
+    ActualFileRoot sut("/develop/test/file_root/test_root", {".md"});
 
     auto doc_list = sut.Search();
 
