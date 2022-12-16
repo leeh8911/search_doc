@@ -15,7 +15,11 @@
 #include "src/document.h"
 
 namespace search_doc::api {
-SearchDoc::SearchDoc(repository::RepositoryPtr repo) : repo_(std::move(repo)) {}
+
+using domain::FileRootPtr;
+using repository::RepositoryPtr;
+
+SearchDoc::SearchDoc(RepositoryPtr repo, FileRootPtr root) : repo_(std::move(repo)), root_(std::move(root)) {}
 
 value_object::DocumentList SearchDoc::Find(std::string keyword) { return repo_->Query(keyword); }
 
