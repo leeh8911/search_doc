@@ -12,6 +12,7 @@
 
 #include <filesystem>
 #include <iostream>
+#include <map>
 #include <set>
 #include <string>
 #include <vector>
@@ -30,8 +31,11 @@ class Document {
 
  private:
     std::string name_{};
+    std::map<std::string, std::set<size_t>> keyword_map_{};
     std::set<std::string> keywords_{};
     fs::file_time_type filetime_{};
+
+    void Read();
 };
 
 using DocumentList = std::vector<Document>;

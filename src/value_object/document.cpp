@@ -12,6 +12,7 @@
 #include <algorithm>
 #include <chrono>
 #include <filesystem>
+#include <fstream>
 #include <iostream>
 #include <iterator>
 #include <string>
@@ -23,7 +24,9 @@ Document::Document(std::string name, std::set<std::string> keywords, fs::file_ti
     : name_(std::move(name)), keywords_(std::move(keywords)), filetime_(filetime) {}
 
 Document::Document(const std::filesystem::directory_entry& entry)
-    : Document(entry.path().string(), {}, entry.last_write_time()) {}
+    : name_(entry.path().string()), keyword_map_(), keywords_(), filetime_(entry.last_write_time()) {
+    Read();
+}
 
 bool Document::operator==(const Document& other) const {
     if (name_ != other.name_) return false;
@@ -43,6 +46,19 @@ bool Document::operator==(const Document& other) const {
 }
 
 bool Document::Contains(std::string keyword) const { return keywords_.contains(keyword); }
+
+void Document::Read() {
+    std::ifstream fs;
+    fs.open(name_);
+
+    std::string word;
+    size_t count = 0;
+    while (fs >> word) {
+        keywords_.emplace(word);
+        auto& index = keyword_map_[word];
+        index.emplace(count++);
+    }
+}
 
 std::ostream& operator<<(std::ostream& os, const Document& doc) {
     os << doc.name_ << "["

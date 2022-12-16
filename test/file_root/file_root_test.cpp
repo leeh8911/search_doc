@@ -28,4 +28,14 @@ TEST(ActualFileRootTest, TotalFilesCase) {
     std::filesystem::directory_entry expect_entry("/develop/test/file_root/test_root/test_file.md");
     EXPECT_EQ(value_object::Document(expect_entry), doc_list.front());
 }
+
+TEST(ActualFileRootTest, KeywordCheckCase) {
+    ActualFileRoot sut("/develop/test/file_root/test_root", {".md"});
+
+    auto doc_list = sut.Search();
+
+    auto doc = doc_list.front();
+    EXPECT_TRUE(doc.Contains("Test"));
+    EXPECT_TRUE(doc.Contains("File"));
+}
 }  // namespace search_doc::domain::test
