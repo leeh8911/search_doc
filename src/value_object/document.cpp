@@ -19,9 +19,10 @@
 #include <utility>
 
 namespace search_doc::value_object {
+
 namespace fs = std::filesystem;
-Document::Document(std::string name, std::set<std::string> keywords, fs::file_time_type filetime)
-    : name_(std::move(name)), keywords_(std::move(keywords)), filetime_(filetime) {}
+
+Document::Document(std::string name) : Document(fs::directory_entry(name)) {}
 
 Document::Document(const std::filesystem::directory_entry& entry)
     : name_(entry.path().string()), keyword_map_(), keywords_(), filetime_(entry.last_write_time()) {

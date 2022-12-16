@@ -21,7 +21,7 @@ namespace search_doc::value_object {
 namespace fs = std::filesystem;
 class Document {
  public:
-    explicit Document(std::string name, std::set<std::string> keywords = {}, fs::file_time_type filetime = {});
+    explicit Document(std::string name);
     explicit Document(const fs::directory_entry& entry);
 
     bool operator==(const Document& other) const;
