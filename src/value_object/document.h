@@ -19,21 +19,41 @@
 
 namespace search_doc::value_object {
 namespace fs = std::filesystem;
-class Document {
+
+/// @brief Document 클래스의 인터페이스이다.
+///
+struct IDocument {
+    virtual ~IDocument() = default;
+
+    virtual bool operator==(const IDocument& other) const = 0;
+    virtual bool Contains(std::string keyword) const = 0;
+
+    //  protected:
+    virtual std::string Name() const = 0;
+    virtual std::map<std::string, std::set<size_t>> KeywordMap() const = 0;
+    virtual fs::file_time_type Filetime() const = 0;
+};
+
+/// @brief Document class.
+///
+class Document : public IDocument {
  public:
     explicit Document(std::string name);
     explicit Document(const fs::directory_entry& entry);
 
-    bool operator==(const Document& other) const;
-    bool Contains(std::string keyword) const;
+    bool operator==(const IDocument& other) const override;
+    bool Contains(std::string keyword) const override;
 
     friend std::ostream& operator<<(std::ostream& os, const Document& doc);
 
  private:
     std::string name_{};
     std::map<std::string, std::set<size_t>> keyword_map_{};
-    std::set<std::string> keywords_{};
     fs::file_time_type filetime_{};
+
+    std::string Name() const override;
+    std::map<std::string, std::set<size_t>> KeywordMap() const override;
+    fs::file_time_type Filetime() const override;
 
     void Read();
 };

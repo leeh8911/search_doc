@@ -25,28 +25,24 @@ namespace fs = std::filesystem;
 Document::Document(std::string name) : Document(fs::directory_entry(name)) {}
 
 Document::Document(const std::filesystem::directory_entry& entry)
-    : name_(entry.path().string()), keyword_map_(), keywords_(), filetime_(entry.last_write_time()) {
+    : name_(entry.path().string()), keyword_map_(), filetime_(entry.last_write_time()) {
     Read();
 }
 
-bool Document::operator==(const Document& other) const {
-    if (name_ != other.name_) return false;
-    if (filetime_ != other.filetime_) return false;
-    if (keywords_.size() != other.keywords_.size()) return false;
-
-    auto this_it = std::begin(keywords_);
-    auto other_it = std::begin(other.keywords_);
-
-    for (; this_it != std::end(keywords_); ++this_it, ++other_it) {
-        if (*this_it != *other_it) {
-            return false;
-        }
-    }
+bool Document::operator==(const IDocument& other) const {
+    if (name_ != other.Name()) return false;
+    if (filetime_ != other.Filetime()) return false;
 
     return true;
 }
 
-bool Document::Contains(std::string keyword) const { return keywords_.contains(keyword); }
+bool Document::Contains(std::string keyword) const { return keyword_map_.contains(keyword); }
+
+std::string Document::Name() const { return name_; }
+
+std::map<std::string, std::set<size_t>> Document::KeywordMap() const { return keyword_map_; }
+
+fs::file_time_type Document::Filetime() const { return filetime_; }
 
 void Document::Read() {
     std::ifstream fs;
@@ -55,7 +51,6 @@ void Document::Read() {
     std::string word;
     size_t count = 0;
     while (fs >> word) {
-        keywords_.emplace(word);
         auto& index = keyword_map_[word];
         index.emplace(count++);
     }
@@ -66,7 +61,19 @@ std::ostream& operator<<(std::ostream& os, const Document& doc) {
        << std::chrono::duration_cast<std::chrono::milliseconds>(doc.filetime_.time_since_epoch()).count() << "]"
        << ": {";
 
-    std::copy(std::begin(doc.keywords_), std::end(doc.keywords_), std::ostream_iterator<std::string>(os, ", "));
+    std::vector<std::string> temp_format{};
+    auto format = [](const std::pair<std::string, std::set<size_t>>& p) {
+        std::string result = p.first;
+        result += ":[";
+        for (auto index : p.second) {
+            result += std::to_string(index) + ", ";
+        }
+        result += "]";
+        return result;
+    };
+
+    std::transform(std::begin(doc.keyword_map_), std::end(doc.keyword_map_), std::back_inserter(temp_format), format);
+    std::copy(std::begin(temp_format), std::end(temp_format), std::ostream_iterator<std::string>(os, ", "));
     os << "}";
     return os;
 }
