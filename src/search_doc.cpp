@@ -18,7 +18,7 @@
 namespace search_doc::api {
 
 using domain::FileRootPtr;
-using repository::RepositoryPtr;
+using domain::RepositoryPtr;
 
 SearchDoc::SearchDoc(RepositoryPtr repo, FileRootPtr root) : repo_(std::move(repo)), root_(std::move(root)) {}
 
