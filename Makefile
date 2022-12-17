@@ -1,16 +1,20 @@
 .PHONY: all
-all: format test build debug static-test clean doc
+all: format test static-test doc
 
 .PHONY: docker-all
-docker-all: docker-build docker-run
+docker-all: docker-pull docker-run
+
+.PHONY: docker-pull
+docker-pull:
+	docker pull leeh8911/search-doc:latest
 
 .PHONY: docker-build
 docker-build:
-	docker build -t math-cpp .
+	docker build -t search-doc .
 
 .PHONY: docker-run
 docker-run:
-	docker run -it --rm -v ${PWD}:/develop math-cpp
+	docker run -it --rm -v ${PWD}:/develop search-doc
 
 .PHONY: format
 format:
