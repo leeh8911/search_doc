@@ -11,7 +11,7 @@
 #ifndef TEST_MOCK_MOCK_FILE_ROOT_H_
 #define TEST_MOCK_MOCK_FILE_ROOT_H_
 
-#include "src/file_root/file_root.h"
+#include "src/domain/file_root/file_root.h"
 
 namespace search_doc::test {
 class MockFileRoot : public domain::FileRoot {
