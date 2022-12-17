@@ -1,4 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structsearch__doc_1_1repository_1_1Repository.html" title="데이터베이스를 다루기 위한 인터페이스 클래스" alt="" coords="5,5,97,32"/>
-<area shape="rect" id="node2" href="$classsearch__doc_1_1test_1_1MockRepository.html" title=" " alt="" coords="145,5,272,32"/>
+<area shape="rect" id="node1" href="$structsearch__doc_1_1domain_1_1Repository.html" title="데이터베이스를 다루기 위한 인터페이스 클래스" alt="" coords="5,31,97,57"/>
+<area shape="rect" id="node2" href="$classsearch__doc_1_1domain_1_1SqlRepository.html" title=" " alt="" coords="153,5,265,32"/>
+<area shape="rect" id="node3" href="$classsearch__doc_1_1test_1_1MockRepository.html" title=" " alt="" coords="145,56,272,83"/>
 </map>

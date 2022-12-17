@@ -1,6 +1,6 @@
 <map id="MockRepository" name="MockRepository">
 <area shape="rect" id="node1" title=" " alt="" coords="107,455,575,576"/>
-<area shape="rect" id="node2" href="$structsearch__doc_1_1repository_1_1Repository.html" title="데이터베이스를 다루기 위한 인터페이스 클래스" alt="" coords="5,285,480,392"/>
+<area shape="rect" id="node2" href="$structsearch__doc_1_1domain_1_1Repository.html" title="데이터베이스를 다루기 위한 인터페이스 클래스" alt="" coords="5,285,480,392"/>
 <area shape="rect" id="node3" title=" " alt="" coords="504,300,683,377"/>
 <area shape="rect" id="node4" title=" " alt="" coords="481,145,588,223"/>
 <area shape="rect" id="node5" title=" " alt="" coords="612,145,713,223"/>
