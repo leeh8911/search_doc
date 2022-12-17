@@ -17,15 +17,16 @@
 
 #include "src/value_object/document.h"
 
+namespace search_doc::domain {
+
 namespace fs = std::filesystem;
 
-namespace search_doc::domain {
-ActualFileRoot::ActualFileRoot(std::string root_path, std::set<std::string> extensions)
+ActualFileRoot::ActualFileRoot(fs::path root_path, std::set<std::string> extensions)
     : root_path_(std::move(root_path)), extensions_(std::move(extensions)) {}
 
 value_object::DocumentList ActualFileRoot::Search() {
     value_object::DocumentList doc_list{};
-    for (const fs::directory_entry& entry : fs::recursive_directory_iterator(fs::path(root_path_))) {
+    for (const fs::directory_entry& entry : fs::recursive_directory_iterator(root_path_)) {
         if (extensions_.contains(entry.path().extension())) {
             doc_list.emplace_back(std::make_shared<value_object::Document>(entry));
         }

@@ -11,6 +11,7 @@
 #ifndef SRC_DOMAIN_FILE_ROOT_FILE_ROOT_H_
 #define SRC_DOMAIN_FILE_ROOT_FILE_ROOT_H_
 
+#include <filesystem>
 #include <memory>
 #include <set>
 #include <string>
@@ -25,13 +26,14 @@ struct FileRoot {
 };
 using FileRootPtr = std::unique_ptr<FileRoot>;
 
+namespace fs = std::filesystem;
 class ActualFileRoot : public FileRoot {
  public:
-    explicit ActualFileRoot(std::string root_path, std::set<std::string> extensions);
+    explicit ActualFileRoot(fs::path root_path, std::set<std::string> extensions);
     value_object::DocumentList Search() override;
 
  private:
-    std::string root_path_{};
+    fs::path root_path_{};
     std::set<std::string> extensions_{};
 };
 }  // namespace search_doc::domain
