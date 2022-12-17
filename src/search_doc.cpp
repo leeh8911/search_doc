@@ -12,12 +12,13 @@
 #include <string>
 #include <utility>
 
+#include "src/domain/file_root/file_root.h"
 #include "src/value_object/document.h"
 
 namespace search_doc::api {
 
 using domain::FileRootPtr;
-using repository::RepositoryPtr;
+using domain::RepositoryPtr;
 
 SearchDoc::SearchDoc(RepositoryPtr repo, FileRootPtr root) : repo_(std::move(repo)), root_(std::move(root)) {}
 

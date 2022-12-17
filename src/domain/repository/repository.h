@@ -8,15 +8,15 @@
 ///
 ///
 
-#ifndef SRC_REPOSITORY_H_
-#define SRC_REPOSITORY_H_
+#ifndef SRC_DOMAIN_REPOSITORY_REPOSITORY_H_
+#define SRC_DOMAIN_REPOSITORY_REPOSITORY_H_
 
 #include <memory>
 #include <string>
 
-#include "value_object/document.h"
+#include "src/value_object/document.h"
 
-namespace search_doc::repository {
+namespace search_doc::domain {
 /// @brief 데이터베이스를 다루기 위한 인터페이스 클래스
 ///
 struct Repository {
@@ -28,6 +28,6 @@ struct Repository {
 
 using RepositoryPtr = std::unique_ptr<Repository>;
 
-}  // namespace search_doc::repository
+}  // namespace search_doc::domain
 
-#endif  // SRC_REPOSITORY_H_
+#endif  // SRC_DOMAIN_REPOSITORY_REPOSITORY_H_

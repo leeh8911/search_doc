@@ -8,14 +8,15 @@
 ///
 ///
 
-#ifndef SRC_FILE_ROOT_FILE_ROOT_H_
-#define SRC_FILE_ROOT_FILE_ROOT_H_
+#ifndef SRC_DOMAIN_FILE_ROOT_FILE_ROOT_H_
+#define SRC_DOMAIN_FILE_ROOT_FILE_ROOT_H_
 
+#include <filesystem>
 #include <memory>
 #include <set>
 #include <string>
 
-#include "../value_object/document.h"
+#include "src/value_object/document.h"
 
 namespace search_doc::domain {
 struct FileRoot {
@@ -23,18 +24,18 @@ struct FileRoot {
 
     virtual value_object::DocumentList Search() = 0;
 };
-
 using FileRootPtr = std::unique_ptr<FileRoot>;
 
+namespace fs = std::filesystem;
 class ActualFileRoot : public FileRoot {
  public:
-    explicit ActualFileRoot(std::string root_path, std::set<std::string> extensions);
+    explicit ActualFileRoot(fs::path root_path, std::set<std::string> extensions);
     value_object::DocumentList Search() override;
 
  private:
-    std::string root_path_{};
+    fs::path root_path_{};
     std::set<std::string> extensions_{};
 };
 }  // namespace search_doc::domain
 
-#endif  // SRC_FILE_ROOT_FILE_ROOT_H_
+#endif  // SRC_DOMAIN_FILE_ROOT_FILE_ROOT_H_

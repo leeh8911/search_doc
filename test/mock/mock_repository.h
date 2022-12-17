@@ -13,10 +13,10 @@
 
 #include <string>
 
-#include "src/repository.h"
+#include "src/domain/repository/repository.h"
 #include "src/value_object/document.h"
 namespace search_doc::test {
-class MockRepository : public repository::Repository {
+class MockRepository : public domain::Repository {
  public:
     ~MockRepository() override = default;
     MockRepository() = default;

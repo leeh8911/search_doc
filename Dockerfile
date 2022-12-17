@@ -17,6 +17,7 @@ RUN apt-get update && apt-get install -qq -y -f --no-install-recommends \
     libgtest-dev automake wget curl unzip autoconf libtool g++ gcc make gdb \
     cmake git vim \
     sqlitebrowser \ 
+    sqlite3 \ 
     ## Security
     openssh-client \
     ## BLAS & LAPACK

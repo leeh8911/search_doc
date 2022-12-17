@@ -39,7 +39,8 @@ run:
 	
 .PHONY: test-run
 test-run:
-	build/test/SEARCH_DOC_TEST
+	cd build
+	test/SEARCH_DOC_TEST
 
 .PHONY: test
 test:
