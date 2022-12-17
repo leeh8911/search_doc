@@ -5,22 +5,32 @@ add_library(${LIB_NAME} STATIC
 
 add_executable(${EXEC_NAME} ${SRC_FILES})
 
-find_package(Python3 REQUIRED)
-find_package(Eigen3 3.3 REQUIRED NO_MODULE)
-
 target_link_libraries(
     ${LIB_NAME} PUBLIC
     pthread
     Eigen3::Eigen
+    SQLite::SQLite3
 )
+
+target_link_libraries(
+    ${EXEC_NAME} PUBLIC
+    pthread
+    Eigen3::Eigen
+    SQLite::SQLite3
+)
+
+
+message(STATUS ${SQLITE3_INCLUDE_DIRS})
 
 target_include_directories(${LIB_NAME} PUBLIC
     ${CMAKE_SOURCE_DIR}
+    ${SQLITE3_INCLUDE_DIRS}
     "${EIGEN3_INCLUDE_DIR}"
 )
 
 target_include_directories(${EXEC_NAME} PUBLIC
     ${CMAKE_SOURCE_DIR}
+    ${SQLITE3_INCLUDE_DIRS}
     "${EIGEN3_INCLUDE_DIR}"
 )
 

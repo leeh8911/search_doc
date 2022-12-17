@@ -35,6 +35,10 @@ endif()
 message(STATUS ${OPTION_BUILD_DOCS})
 message(STATUS OPTION_BUILD_DOCS)
 
+find_package(Python3 REQUIRED)
+find_package(Eigen3 3.3 REQUIRED NO_MODULE)
+find_package(SQLite3 REQUIRED)
+
 if(OPTION_BUILD_DOCS)
 message(STATUS "Build only documentation")
 add_subdirectory(docs)
