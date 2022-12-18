@@ -48,9 +48,6 @@ test:
 	cmake -DOPTION_BUILD_DOCS=OFF -DOPTION_TEST_ALL=OFF ..&& \
 	make &&\
 	test/SEARCH_DOC_TEST
-.PHONY: test-run
-test-run:
-	build/test/SEARCH_DOC_TEST
 
 .PHONY: test-all
 test-all:
