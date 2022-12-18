@@ -22,20 +22,20 @@
 namespace search_doc::db {
 
 const std::string kQueryTableCreate =
-    "CREATE TABLE DocumentTable (Name TEXT PRIMARY KEY NOT NULL, Path TEXT, Keyword TEXT, Index TEXT, Time TEXT);";
+    "CREATE TABLE Document(Name TEXT, Path TEXT, Keyword TEXT, DocIndex TEXT, Time TEXT);";
 
-const std::string kQueryTableExist = "SELECT name FROM sqlite_master WHERE type='table' AND name='DocumentTable';";
+const std::string kQueryTableExist = "SELECT name FROM sqlite_master WHERE type='table' AND name='Document';";
 
-const std::string kQueryTableDrop = "DROP TABLE IF EXISTS DocumentTable;";
+const std::string kQueryTableDrop = "DROP TABLE IF EXISTS Document;";
 
 const std::string kQueryTableExistRecord =
-    "SELECT Name FROM DocumentTable WHERE Path=? AND Keyword=? AND Index=? AND Time=?;";
+    "SELECT Name FROM Document WHERE Path=? AND Keyword=? AND DocIndex=? AND Time=?;";
 
-const std::string kQueryTableDeleteRecord = "DELETE FROM DocumentTable WHERE Name=?;";
+const std::string kQueryTableDeleteRecord = "DELETE FROM Document WHERE Name=?;";
 
-const std::string kQueryTableUpsertRecord = "INSERT OR REPLACE INTO DocumentTable VALUES(?, ?, ?, ?, ?);";
+const std::string kQueryTableUpsertRecord = "INSERT OR REPLACE INTO Document VALUES(?, ?, ?, ?, ?);";
 
-const std::string kQueryTableSelectAll = "SELECT Name FROM DocumentTable;";
+const std::string kQueryTableSelectAll = "SELECT Name FROM Document;";
 
 const std::string kQueryDbCleanUp = "VACUUM;";
 
@@ -74,7 +74,7 @@ bool Database::Upsert(const value_object::Document& doc) {
     sqlite3_bind_text(stmt, 22, doc.Path().c_str(), -1, SQLITE_STATIC);
     sqlite3_bind_text(stmt, 22, "", -1, SQLITE_STATIC);
     sqlite3_bind_text(stmt, 22, "", -1, SQLITE_STATIC);
-    sqlite3_bind_text(stmt, 22, "", -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 22, time.c_str(), -1, SQLITE_STATIC);
 
     // begin
     this->Begin();
@@ -159,7 +159,6 @@ bool Database::CreateTable() {
     bool result = true;
 
     sqlite3_prepare_v2(db, query, -1, &stmt, nullptr);
-
     Begin();
     if (sqlite3_step(stmt) != SQLITE_DONE) {
         result = false;

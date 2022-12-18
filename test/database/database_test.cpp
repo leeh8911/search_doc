@@ -11,12 +11,31 @@
 
 #include <gtest/gtest.h>
 
+#include <filesystem>
+#include <list>
+#include <string>
+
+#include "src/value_object/document.h"
+#include "test/util/raii_file.h"
+
 namespace search_doc::test {
+namespace fs = std::filesystem;
 TEST(DatabaseIntegratedTest, SampleCase) {
-    db::Database database;
+    util::RAIIFile file("dummy_file.dtxt");
+    value_object::Document doc(file.Path());
 
-    EXPECT_TRUE(database.Open("test.sqlite"));
+    db::Database sut;
 
-    EXPECT_TRUE(database.Close());
+    EXPECT_TRUE(sut.Open("test.sqlite"));
+
+    EXPECT_TRUE(sut.Upsert(doc));
+
+    auto string_list = sut.GetAllRecords();
+
+    for (auto str : string_list) {
+        std::cout << str << "\n";
+    }
+
+    EXPECT_TRUE(sut.Close());
 }
 }  // namespace search_doc::test
