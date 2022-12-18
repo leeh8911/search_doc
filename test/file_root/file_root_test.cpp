@@ -37,5 +37,7 @@ TEST(ActualFileRootTest, KeywordCheckCase) {
     auto doc = doc_list.front();
     EXPECT_TRUE(doc->Contains("Test")) << *doc;
     EXPECT_TRUE(doc->Contains("File")) << *doc;
+
+    std::cout << *doc << "\n";
 }
 }  // namespace search_doc::domain::test

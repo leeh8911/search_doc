@@ -34,7 +34,7 @@ Document::Document(const std::filesystem::directory_entry& entry)
 
 bool Document::operator==(const IDocument& other) const {
     if (name_ != other.Name()) return false;
-    if (filetime_ != other.Filetime()) return false;
+    if (Filetime() != other.Filetime()) return false;
 
     return true;
 }
@@ -47,7 +47,19 @@ std::string Document::Path() const { return path_; }
 
 std::map<std::string, std::set<size_t>> Document::KeywordMap() const { return keyword_map_; }
 
-fs::file_time_type Document::Filetime() const { return filetime_; }
+std::string Document::Filetime() const {
+    using namespace std::chrono;
+
+    std::string result{};
+    auto sctp =
+        time_point_cast<system_clock::duration>(filetime_ - decltype(filetime_)::clock::now() + system_clock::now());
+    auto tt = system_clock::to_time_t(sctp);
+    std::tm* gmt = std::gmtime(&tt);
+    std::stringstream buffer;
+    buffer << std::put_time(gmt, "%A, %d, %B, %Y, %OH:%OM:%OS");
+
+    return buffer.str();
+}
 
 void Document::Read() {
     std::ifstream fs;
@@ -62,8 +74,7 @@ void Document::Read() {
 }
 
 std::ostream& operator<<(std::ostream& os, const Document& doc) {
-    os << doc.path_ << "/" << doc.name_ << "["
-       << std::chrono::duration_cast<std::chrono::milliseconds>(doc.filetime_.time_since_epoch()).count() << "]"
+    os << doc.path_ << "/" << doc.name_ << "[" << doc.Filetime() << "]"
        << ": {";
 
     std::vector<std::string> temp_format{};
