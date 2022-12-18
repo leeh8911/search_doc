@@ -13,8 +13,11 @@
 
 #include <sqlite3.h>
 
+#include <filesystem>
 #include <list>
 #include <string>
+
+#include "src/value_object/document.h"
 
 namespace search_doc::db {
 
@@ -22,7 +25,7 @@ class Database {
  public:
     bool Open(std::string file_name);
     bool Close();
-    bool Upsert(std::string file_path, std::string checksum, void* binary_data, int size);
+    bool Upsert(const value_object::Document& doc);
     bool Delete(std::string key);
     std::list<std::string> GetAllRecords();
 

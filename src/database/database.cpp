@@ -12,26 +12,30 @@
 
 #include <sqlite3.h>
 
+#include <chrono>
+#include <iostream>
 #include <list>
 #include <memory>
 #include <string>
+
+#include "src/value_object/document.h"
 namespace search_doc::db {
 
 const std::string kQueryTableCreate =
-    "CREATE TABLE CRYSTAL_CUBE (FilePath TEXT PRIMARY KEY NOT NULL, CheckSum TEXT, Image BLOB);";
+    "CREATE TABLE DocumentTable (Name TEXT PRIMARY KEY NOT NULL, Path TEXT, Keyword TEXT, Index TEXT, Time TEXT);";
 
-const std::string kQueryTableExist = "SELECT name FROM sqlite_master WHERE type='table' AND name='CRYSTAL_CUBE';";
+const std::string kQueryTableExist = "SELECT name FROM sqlite_master WHERE type='table' AND name='DocumentTable';";
 
-const std::string kQueryTableDrop = "DROP TABLE IF EXISTS CRYSTAL_CUBE;";
+const std::string kQueryTableDrop = "DROP TABLE IF EXISTS DocumentTable;";
 
 const std::string kQueryTableExistRecord =
-    "SELECT FilePath FROM CRYSTAL_CUBE WHERE FilePath=? AND CheckSum=? AND Version=?;";
+    "SELECT Name FROM DocumentTable WHERE Path=? AND Keyword=? AND Index=? AND Time=?;";
 
-const std::string kQueryTableDeleteRecord = "DELETE FROM CRYSTAL_CUBE WHERE FilePath=?;";
+const std::string kQueryTableDeleteRecord = "DELETE FROM DocumentTable WHERE Name=?;";
 
-const std::string kQueryTableUpsertRecord = "INSERT OR REPLACE INTO CRYSTAL_CUBE VALUES(?, ?, ?);";
+const std::string kQueryTableUpsertRecord = "INSERT OR REPLACE INTO DocumentTable VALUES(?, ?, ?, ?, ?);";
 
-const std::string kQueryTableSelectAll = "SELECT FilePath FROM CRYSTAL_CUBE;";
+const std::string kQueryTableSelectAll = "SELECT Name FROM DocumentTable;";
 
 const std::string kQueryDbCleanUp = "VACUUM;";
 
@@ -57,20 +61,20 @@ bool Database::Open(std::string file_name) {
 
 bool Database::Close() { return (sqlite3_close(db) == SQLITE_OK); }
 
-bool Database::Upsert(std::string file_path, std::string checksum, void* binary_data, int size) {
+bool Database::Upsert(const value_object::Document& doc) {
     sqlite3_stmt* stmt = nullptr;
     const char* query = kQueryTableUpsertRecord.c_str();
     bool result = true;
 
-    sqlite3_prepare16_v2(db, query, -1, &stmt, nullptr);
-    sqlite3_bind_text16(stmt, 1, file_path.c_str(), -1, SQLITE_STATIC);
-    sqlite3_bind_text16(stmt, 22, checksum.c_str(), -1, SQLITE_STATIC);
+    auto keyword_map = doc.KeywordMap();
+    auto time = doc.Filetime();
 
-    if (binary_data == nullptr) {
-        sqlite3_bind_blob(stmt, 23, nullptr, -1, SQLITE_STATIC);
-    } else {
-        sqlite3_bind_blob(stmt, 23, binary_data, size, SQLITE_TRANSIENT);  // NOLINT
-    }
+    sqlite3_prepare_v2(db, query, -1, &stmt, nullptr);
+    sqlite3_bind_text(stmt, 1, doc.Name().c_str(), -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 22, doc.Path().c_str(), -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 22, "", -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 22, "", -1, SQLITE_STATIC);
+    sqlite3_bind_text(stmt, 22, "", -1, SQLITE_STATIC);
 
     // begin
     this->Begin();
