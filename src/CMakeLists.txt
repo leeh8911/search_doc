@@ -19,18 +19,15 @@ target_link_libraries(
     SQLite::SQLite3
 )
 
-
-message(STATUS ${SQLITE3_INCLUDE_DIRS})
-
 target_include_directories(${LIB_NAME} PUBLIC
     ${CMAKE_SOURCE_DIR}
-    ${SQLITE3_INCLUDE_DIRS}
+    ${SQLite3_INCLUDE_DIRS}
     "${EIGEN3_INCLUDE_DIR}"
 )
 
 target_include_directories(${EXEC_NAME} PUBLIC
     ${CMAKE_SOURCE_DIR}
-    ${SQLITE3_INCLUDE_DIRS}
+    ${SQLite3_INCLUDE_DIRS}
     "${EIGEN3_INCLUDE_DIR}"
 )
 
