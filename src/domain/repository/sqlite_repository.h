@@ -11,8 +11,6 @@
 #ifndef SRC_DOMAIN_REPOSITORY_SQLITE_REPOSITORY_H_
 #define SRC_DOMAIN_REPOSITORY_SQLITE_REPOSITORY_H_
 
-#include <sqlite3.h>
-
 #include <string>
 
 #include "src/domain/repository/repository.h"

@@ -14,14 +14,14 @@ target_link_libraries(
     ${GTEST_LIBRARIES} 
     pthread
     Eigen3::Eigen
+    SQLite::SQLite3
 )
-
-message(STATUS ${EIGEN3_INCLUDE_DIR})
 
 target_include_directories(${TEST_NAME} PUBLIC
     "${CMAKE_SOURCE_DIR}"
     "${EIGEN3_INCLUDE_DIR}"
     "${GTEST_INCLUDE_DIRS}"
+    ${SQLite3_INCLUDE_DIRS}
 )
 
 

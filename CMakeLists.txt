@@ -27,13 +27,17 @@ find_program(CLANGTIDY clang-tidy)
 if(CLANGTIDY)
 message(STATUS "activate clang-tidy")
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-set(CMAKE_CXX_CLANG_TIDY "${CLANGTIDY};-extra-arg=-Wno-unknown-warning-option;-header-filter=${CMAKE_SOURCE_DIR}/src/*;-fix")
+set(CMAKE_CXX_CLANG_TIDY "${CLANGTIDY};-extra-arg=-Wno-unknown-warning-option;-fix")
 else()
 message(SEND_ERROR "clang-tidy requested but executable not found")
 endif()
 
 message(STATUS ${OPTION_BUILD_DOCS})
 message(STATUS OPTION_BUILD_DOCS)
+
+find_package(Python3 REQUIRED)
+find_package(Eigen3 3.3 REQUIRED NO_MODULE)
+find_package(SQLite3 REQUIRED)
 
 if(OPTION_BUILD_DOCS)
 message(STATUS "Build only documentation")

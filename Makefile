@@ -1,8 +1,12 @@
 .PHONY: all
-all: format test build debug static-test clean doc
+all: format test static-test doc
 
 .PHONY: docker-all
-docker-all: docker-build docker-run
+docker-all: docker-pull docker-run
+
+.PHONY: docker-pull
+docker-pull:
+	docker pull leeh8911/search-doc:latest
 
 .PHONY: docker-build
 docker-build:
@@ -49,9 +53,6 @@ test:
 	cmake -DOPTION_BUILD_DOCS=OFF -DOPTION_TEST_ALL=OFF ..&& \
 	make &&\
 	test/SEARCH_DOC_TEST
-.PHONY: test-run
-test-run:
-	build/test/SEARCH_DOC_TEST
 
 .PHONY: test-all
 test-all:
